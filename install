@@ -1,0 +1,24 @@
+#!/bin/bash
+sudo apt-get update && sudo apt-get install -y nginx fcgiwrap
+pwd=$(pwd)
+
+sudo tee /etc/nginx/sites-enabled/default >/dev/null <<EOF
+server {
+        listen 80;
+        location / {
+        fastcgi_index index.cgi;
+        try_files \$uri \$uri/ \$uri.html \$uri.cgi?\$query_string;
+        gzip off;
+        root ${pwd}/www;
+        fastcgi_pass  unix:/var/run/fcgiwrap.socket;
+        include /etc/nginx/fastcgi_params;
+        fastcgi_param \SCRIPT_FILENAME  \$document_root\$fastcgi_script_name;
+                   }
+                   location ~* \.(js|jpg|png|css)$ {
+                   root ${pwd}/;
+                   expires 30d;
+                   }
+        }  
+EOF
+
+sudo service nginx restart
