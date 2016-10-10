@@ -1,5 +1,15 @@
 #!/bin/bash
-sudo apt-get update && sudo apt-get install -y nginx fcgiwrap
+
+echo -e "\033[0;31m################################################################\033[0m"
+echo -e "\033[0;31m#This Scrip will install nginx and rewrite your default config #\033[0m"
+echo -en "Type \"\033[23;1myes\033[0m\" when you're really sure: "
+
+read answer
+
+if [[ $(echo $answer | tr "[A-Z]" "[a-z]") == "yes" ]] ; then
+
+dpkg -l|grep nginx >/dev/null && dpkg -l|grep fcgiwrap >/dev/null \
+|| sudo apt-get update;sudo apt-get install -y nginx fcgiwrap
 pwd=$(pwd)
 
 sudo tee /etc/nginx/sites-enabled/default >/dev/null <<EOF
@@ -20,5 +30,6 @@ server {
                    }
         }  
 EOF
-
+test -d www || mkdir www
 sudo service nginx restart
+fi

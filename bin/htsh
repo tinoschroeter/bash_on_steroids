@@ -8,7 +8,7 @@ tee $2 >>/dev/null <<EOF
 echo Content-type: text/html
 echo ""
 
-eval `echo "${QUERY_STRING}"|tr '&' ';'`
+eval \`echo "\${QUERY_STRING}"|tr '&' ';'\`
 EOF
 
 flag=0
@@ -21,20 +21,20 @@ while read -r line;do
 	if [ $? -eq 0 ];then
 		if [ $flag -eq 0 ];then
 			line=${line//<?bash/<?}
-			pre=`echo -e "$line" |  perl -CS -pe 's/<?.*//'`
-			comm=`echo -e "$line" | perl -CS -pe 's/^.*<? //' | perl -CS -pe 's/?>.*//'`
-			post=`echo -e "$line" | perl -CS -pe 's/^.*?>//'`
+			pre=`echo -e "$line" |  sed -e 's/<?.*//'`
+			comm=`echo -e "$line" | sed -e 's/^.*<? //' | sed -e 's/?>.*//'`
+			post=`echo -e "$line" | sed -e 's/^.*?>//'`
 			
 			if [ -n "$pre" ];then
 				pre=${pre//\\/\\\\}
-				mod_pre=`echo -e "$pre" | perl -CS -pe "s/'/\\\'/g" | perl -CS -pe 's/"/\\\"/g'`
+				mod_pre=`echo -e "$pre" | sed "s/'/\\\'/g" | sed 's/"/\\\"/g'`
 				mod_pre=${mod_pre//\$/\\$}
 				echo -e "echo  \"$mod_pre\"" >>"$2"
 			fi
 			echo -e "$comm" >> "$2"
 			if [ -n "$post" ];then
 				post=${post//\\/\\\\}
-				mod_post=`echo -e "$post" | perl -CS -pe "s/'/\\\'/g" | perl -CS -pe 's/"/\\\"/g'`
+				mod_post=`echo -e "$post" | sed "s/'/\\\'/g" | sed 's/"/\\\"/g'`
 				mod_post=${mod_post//\$/\\$}
 				echo -e "echo  \"$mod_post\"" >>"$2"
 			fi
@@ -72,7 +72,7 @@ while read -r line;do
 	# Take action on current line based on flag
 	if [ $flag -eq 0 ];then
 		line=${line//\\/\\\\}
-		modline=`echo  "$line" |perl -CS -pe "s/'/\\\'/g" | perl -CS -pe 's/"/\\\"/g'`
+		modline=`echo  "$line" |sed "s/'/\\\'/g" | sed 's/"/\\\"/g'`
 		modline=${modline//\$/\\$}
 		echo -e "echo  \"$modline\"" >>"$2"
 	else
