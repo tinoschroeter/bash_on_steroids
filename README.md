@@ -55,7 +55,75 @@ generate www/example.cgi file...
 ?>
 ```
 ![screenshot](https://raw.githubusercontent.com/tinoschroeter/BaschOnRails/master/static/form.png)
-### nginx config
+### WLAN configuration Webapp_
+```sh
+.
+.
+.
+<form class="form-horizontal">
+<fieldset>
+<legend></legend>
+
+ <!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="ssid">SSID</label>
+  <div class="col-md-6">
+   <select id="ssid" name="selectbasic" class="form-control">
+   <?bash
+      iwlist wlan0 scan|grep ESSID| cut -d "\"" -f 2|while read i;do
+        echo "<option value="$i">$i</option>"
+        done
+        echo "</select>"
+   ?>
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password</label>
+  <div class="col-md-6">
+  <input id="password" name="password" placeholder="Password" class="form-control input-md" required="" type="password">
+
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="enter"></label>
+  <div class="col-md-4">
+    <button id="submit" name="" class="btn btn-success">Submitt</button>
+    <a id="rescan" class="btn btn-info" href="/wlan">Rescan</a>
+  </div>
+</div>
+
+<?bash
+   if [ ! -z ${selectbasic} ];then
+     sudo tee /etc/network/interfaces >/dev/null <<EOF
+     source-directory /etc/network/interfaces.d
+
+     auto lo 
+     iface lo inet loopback
+
+     iface eth0 inet dhcp
+
+     allow-hotplug wlan0
+     iface wlan0 inet dhcp
+     wpa-ap-scan 1
+     wpa-scan-ssid 1
+     wpa-ssid "$selectbasic"
+     wpa-psk "$password"
+     EOF
+     echo "sudo ifdown wlan0 && sleep 1 && ifup wlan0"| at now
+   fi
+?>
+
+</fieldset>
+</form>
+.
+.
+.
+```
+## nginx config
 ```
 server {
         listen 80;
@@ -75,6 +143,12 @@ server {
         }  
 
 ```
+## use sudo in your CGI scripts
+```sh
+$sudo visudo
+```
+and put this to your sudoers file "www-data ALL=(ALL) NOPASSWD: ALL"
+
 ## Thanks
 
 Thanks to [Tiny Bash Server](https://github.com/sayanriju/Tiny-Bash-Server) 
