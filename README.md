@@ -1,19 +1,32 @@
 Use bash CGI style scrpts for writing beautiful web apps.
 # ![pageres](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/like_a_boss.png)
 
-## Install
+## Table of content
+
+-  [Install](#Install)
+-  [Features](#Features)
+-  [Usage](#Usage)
+-  [Usage](#Usage)
+-  [Examples](#Examples)
+    - [list example](#list-example_) 
+    - [form example](#form-example_)
+    - [WLAN Webapp](#WLAN-configuration-Webapp_)
+-  [nginx config](#nginx-config)
+-  [use sudo](#use-sudo-in-your-CGI-scripts)
+
+### Install
 ```
 $ git clone https://github.com/tinoschroeter/BaschOnRails.git /var/www/newProject
 $ cd /var/www/newProject
 $ ./install
 ```
-## Features
+### Features
 - easy to use
 - write fast wabapps in simpe bash script style
 - QUERY_STRING variables can used as normal bash variables 
 - (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
 
-## Usage:
+### Usage:
 All bash codes are to be enclosed within <?bash ... ?> or in short, <? ... ?> tags. 
 ```
 $:/var/www/newProject vim template/example.htsh
@@ -62,6 +75,7 @@ generate www/example.cgi file...
 ```
 ![screenshot](https://raw.githubusercontent.com/tinoschroeter/BaschOnRails/master/static/form.png)
 ### WLAN configuration Webapp_
+
 ```sh
 .
 .
@@ -131,7 +145,7 @@ generate www/example.cgi file...
 ```
 ![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wlan.png)
 
-## nginx config
+### nginx config
 ```
 server {
         listen 80;
@@ -151,7 +165,7 @@ server {
         }  
 
 ```
-## use sudo in your CGI scripts
+### use sudo in your CGI scripts
 ```sh
 $sudo visudo
 ```
