@@ -129,7 +129,7 @@ generate www/example.cgi file...
 .
 .
 ```
-![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wlan.png=
+![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wlan.png)
 
 ## nginx config
 ```
