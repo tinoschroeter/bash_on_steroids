@@ -6,7 +6,6 @@ Use bash CGI style scrpts for writing beautiful web apps.
 -  [Install](#Install)
 -  [Features](#Features)
 -  [Usage](#Usage)
--  [Usage](#Usage)
 -  [Examples](#Examples)
     - [list example](#list-example_) 
     - [form example](#form-example_)
