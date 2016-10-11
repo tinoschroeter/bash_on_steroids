@@ -105,19 +105,19 @@ generate www/example.cgi file...
 <?bash
    if [ ! -z ${selectbasic} ];then
      sudo tee /etc/network/interfaces >/dev/null <<EOF
-     source-directory /etc/network/interfaces.d
+        source-directory /etc/network/interfaces.d
 
-     auto lo 
-     iface lo inet loopback
+        auto lo 
+        iface lo inet loopback
 
-     iface eth0 inet dhcp
+        iface eth0 inet dhcp
 
-     allow-hotplug wlan0
-     iface wlan0 inet dhcp
-     wpa-ap-scan 1
-     wpa-scan-ssid 1
-     wpa-ssid "$selectbasic"
-     wpa-psk "$password"
+        allow-hotplug wlan0
+        iface wlan0 inet dhcp
+        wpa-ap-scan 1
+        wpa-scan-ssid 1
+        wpa-ssid "$selectbasic"
+        wpa-psk "$password"
      EOF
      echo "sudo ifdown wlan0 && sleep 1 && ifup wlan0"| at now
    fi
@@ -129,6 +129,8 @@ generate www/example.cgi file...
 .
 .
 ```
+![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wlan.png=
+
 ## nginx config
 ```
 server {
