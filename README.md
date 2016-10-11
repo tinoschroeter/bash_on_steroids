@@ -7,6 +7,12 @@ $ git clone https://github.com/tinoschroeter/BaschOnRails.git /var/www/newProjec
 $ cd /var/www/newProject
 $ ./install
 ```
+## Features
+- easy to use
+- write fast wabapps in simpe bash script style
+- QUERY_STRING variables can used as normal bash variables 
+- (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
+
 ## Usage:
 All bash codes are to be enclosed within <?bash ... ?> or in short, <? ... ?> tags. 
 ```
