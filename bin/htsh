@@ -8,6 +8,8 @@ tee $2 >>/dev/null <<EOF
 echo Content-type: text/html
 echo ""
 
+POST=\$(</dev/stdin)
+eval \`echo "\${POST}"|tr '&' ';'\`
 eval \`echo "\${QUERY_STRING}"|tr '&' ';'\`
 EOF
 
