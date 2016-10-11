@@ -145,6 +145,74 @@ generate www/example.cgi file...
 ```
 ![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wlan.png)
 
+### login wabapp
+```sh
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logine</title>
+    <link href="/static/css/login.css" rel="stylesheet">
+    <script src="/static/js/login.js"></script>
+  </head>
+          <?bash
+            if [ $email == "mail%40internet.de" ] && [ $password == "password" ];then
+              sessionid=$(shuf -i22222-987654321 -n1)
+              sudo echo "$sessionid">>/var/www/backend/session
+              echo "<meta http-equiv="refresh" content="1";url="http://192.168.0.29/index" />"
+            fi
+           ?>
+
+  <?bash echo "<meta http-equiv="Set-Cookie" content="$sessionid">" ?>
+  <body>
+  <div class="container">
+        <div class="card card-container">
+            <img id="profile-img" class="profile-img-card" src="/static/img/avatar_login.png" />
+            <p id="profile-name" class="profile-name-card"></p>
+            <form class="form-signin" method="post">
+                <span id="reauth-email" class="reauth-email"></span>
+          <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
+                <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+                <div id="remember" class="checkbox">
+                    <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                    </label>
+                </div>
+                <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign in</button>
+            </form><!-- /form -->
+            <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>
+        </div><!-- /card-container -->
+    </div><!-- /container -->
+</body>
+</html>
+
+```
+Put this in your header of all protected pages
+
+```sh
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <?bash
+    if grep -v $HTTP_COOKIE /var/www/backend/session > /dev/null;then
+      echo "<meta http-equiv="refresh" content="0";url="http://192.168.0.29/login">"
+      exit 0
+    fi
+    ?>
+    <meta name="description" content="">
+.
+.
+```
+![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/login.png)
+
 ### nginx config
 ```
 server {
