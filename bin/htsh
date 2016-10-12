@@ -1,13 +1,13 @@
 #!/bin/bash
 
-## N.B. $1 -> Name of .htsh script
-##		$2 -> Arguments sent by server to script
 tee $2 >>/dev/null <<EOF
 #!/bin/bash 
 
 echo Content-type: text/html
 echo ""
 
+## make POST and GET stings 
+## as bash variables available
 POST=\$(</dev/stdin)
 eval \`echo "\${POST}"|tr '&' ';'\`
 eval \`echo "\${QUERY_STRING}"|tr '&' ';'\`
