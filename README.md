@@ -10,6 +10,7 @@ Use bash CGI style scrpts for writing beautiful web apps.
     - [list example](#list-example_) 
     - [form example](#form-example_)
     - [WLAN Webapp](#WLAN-configuration-Webapp_)
+    - [login wabapp ecample](#login wabapp ecample_)
 -  [nginx config](#nginx-config)
 -  [use sudo](#use-sudo-in-your-CGI-scripts)
 -  [Environment Variables](#Environment-Variables)
@@ -145,7 +146,7 @@ generate www/example.cgi file...
 ```
 ![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wlan.png)
 
-### login wabapp
+### login wabapp ecample_
 ```sh
 <!DOCTYPE html>
 <html lang="de">
@@ -201,11 +202,12 @@ Put this in your header of all protected pages
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <?bash
-    if grep -v $HTTP_COOKIE /var/www/backend/session > /dev/null;then
-      echo "<meta http-equiv="refresh" content="0";url="http://192.168.0.29/login">"
-      exit 0
+    <?bash    
+      if ! grep $HTTP_COOKIE /var/www/backend/session > /dev/null;then
+         echo "<meta http-equiv="refresh" content="0";url="http://192.168.0.29/login">"
+         exit 0
     fi
+
     ?>
     <meta name="description" content="">
 .
