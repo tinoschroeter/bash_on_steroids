@@ -14,6 +14,7 @@ Use bash CGI style scrpts for writing beautiful web apps.
 -  [nginx config](#nginx-config)
 -  [use sudo](#use-sudo-in-your-CGI-scripts)
 -  [Environment Variables](#Environment-Variables)
+-  [LINKS](#links)
 
 ### Install
 ```
@@ -264,6 +265,11 @@ SERVER_NAME 	Your server's fully qualified domain name (e.g. www.cgi101.com)
 SERVER_PORT 	The port number your server is listening on
 SERVER_SOFTWARE The server software you're using (e.g. Apache 1.3) 
 ```
+## Links
+[Advanced Bash-Scripting Guide](http://www.tldp.org/LDP/abs/html/)
+
+[Bash Cheatsheet](http://bruxy.regnet.cz/linux/bash_cheatsheet/bash_cheatsheet.html)
+
 ## Thanks
 
 Thanks to [Tiny Bash Server](https://github.com/sayanriju/Tiny-Bash-Server) 
