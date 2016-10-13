@@ -1,4 +1,5 @@
 #!/bin/bash
+function super { if [ $(id -u) -ne 0 ];then sudo $1;else $1;fi }
 
 echo -e "\033[0;31m################################################################\033[0m"
 echo -e "\033[0;31m#This Scrip will install nginx and rewrite your default config #\033[0m"
@@ -9,10 +10,10 @@ read answer
 if [[ $(echo $answer | tr "[A-Z]" "[a-z]") == "yes" ]] ; then
 
 dpkg -l|grep nginx >/dev/null && dpkg -l|grep fcgiwrap >/dev/null \
-|| sudo apt-get update;sudo apt-get install -y nginx fcgiwrap
+|| super apt-get update;super apt-get install -y nginx fcgiwrap
 pwd=$(pwd)
 
-sudo tee /etc/nginx/sites-enabled/default >/dev/null <<EOF
+super tee /etc/nginx/sites-enabled/default >/dev/null <<EOF
 server {
         listen 80;
         location / {
@@ -31,7 +32,7 @@ server {
         }  
 EOF
 test -d www || mkdir www
-sudo service nginx restart
+super service nginx restart
 echo -e "\033[2J\033[?25l"; R=`tput lines` C=`tput cols`;: $[R--] ; for i in {1..50}
 do ( e=echo\ -e s=sleep j=$[RANDOM%C] d=$[RANDOM%R];for i in `eval $e {1..$R}`;
 do c=`printf '\\\\0%o' $[RANDOM%57+33]` ### http://bruxy.regnet.cz/web/linux ###
