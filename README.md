@@ -10,7 +10,9 @@ Use bash CGI style scrpts for writing beautiful web apps.
     - [list example](#list-example_) 
     - [form example](#form-example_)
     - [WLAN Webapp](#WLAN-configuration-Webapp_)
-    - [login wabapp ecample](#login wabapp ecample_)
+    - [login wabapp example](#login wabapp example_)
+    - [upload example](#upload_example_)
+    - [MySQL example](#mysql_example_)
 -  [nginx config](#nginx-config)
 -  [use sudo](#use-sudo-in-your-CGI-scripts)
 -  [Environment Variables](#Environment-Variables)
@@ -216,6 +218,73 @@ Put this in your header of all protected pages
 ```
 ![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/login.png)
 
+### upload example
+```sh
+<html>
+<form method="post" enctype="multipart/form-data">
+    <label for="file">Filename:</label>
+    <input type="file" name="file" id="file"><br>
+    <input type="submit" name="submit" value="Submit">
+</form>
+<?bash
+read && read disposition && read ctype && read
+size=$((HTTP_CONTENT_LENGTH-a))
+
+eval `echo "${disposition}"|sed 's/\r$//'|cut -d';' -f3`
+
+dd ibs=1 obs=512 count=$size of=/tmp/$filename
+
+if [ -f /tmp/$filename ];then
+  echo "Upload complete, $size bytes stored<br>"
+  echo "Written to /tmp, filename $filename <br>"
+  else
+      echo "uploading error"
+fi
+?>
+</html>
+```
+![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/upload.png)
+
+### MySQL example
+```sh
+## MySQL configuration
+######################
+#mysql_host="localhost"
+#mysql_user="root"
+#myql_pass="password"
+#mysql_db="bos"
+
+
+## MySQL function
+##################
+function mysql_connect {
+         mysql -uroot -p${myql_pass} ${mysql_db}
+}
+## MySQL insert data
+echo "INSERT INTO session (data) VALUES ('${sessionid}')"|mysql_connect
+
+### MySQL read data
+session=$(echo "select data from session;"|mysql_connect login)
+
+mysql> show tables;
++-----------------+
+| Tables_in_login |
++-----------------+
+| session         |
++-----------------+
+1 row in set (0.00 sec)
+
+
+mysql> select * from session;
++----+----------------------------------+
+| id | data                             |
++----+----------------------------------+
+| 10 | YzY1ODcyNzBkOWViMjMyOTIzODIzOGI5 |
+| 12 | MTg2NGExMjkwOTIwMzczNjI5NmMyODFm |
+| 13 | OTNiYmNhOTBkOTkwMTNmZWRjZjU0ZGJk |
++----+----------------------------------+
+3 rows in set (0.00 sec)
+```
 ### nginx config
 ```
 server {
