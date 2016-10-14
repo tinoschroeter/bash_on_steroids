@@ -20,7 +20,7 @@ Use bash CGI style scrpts for writing beautiful web apps.
 
 ### Install
 ```
-$ git clone https://github.com/tinoschroeter/BaschOnRails.git /var/www/newProject
+$ git clone https://github.com/tinoschroeter/bash_on_steroids.git /var/www/newProject
 $ cd /var/www/newProject
 $ ./install
 ```
