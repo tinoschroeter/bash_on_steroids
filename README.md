@@ -163,7 +163,7 @@ generate www/example.cgi file...
           <?bash
             if [ $email == "mail%40internet.de" ] && [ $password == "password" ];then
               sessionid=$(shuf -i22222-987654321 -n1)
-              sudo echo "$sessionid">>/var/www/backend/session
+              echo "$sessionid" >>/tmp/session
               echo "<meta http-equiv="refresh" content="1";url="http://192.168.0.29/index" />"
             fi
            ?>
@@ -206,7 +206,7 @@ Put this in your header of all protected pages
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
     <?bash    
-      if ! grep $HTTP_COOKIE /var/www/backend/session > /dev/null;then
+      if ! grep $HTTP_COOKIE /tmp/session > /dev/null;then
          echo "<meta http-equiv="refresh" content="0";url="http://192.168.0.29/login">"
          exit 0
     fi
