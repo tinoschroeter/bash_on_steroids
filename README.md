@@ -339,6 +339,14 @@ SERVER_SOFTWARE The server software you're using (e.g. Apache 1.3)
 
 [Bash Cheatsheet](http://bruxy.regnet.cz/linux/bash_cheatsheet/bash_cheatsheet.html)
 
+[Wiki Bash Hackers](http://wiki.bash-hackers.org/)
+
+[The Art of command line](https://github.com/jlevy/the-art-of-command-line)
+
+[Unofficial Bash strict mode](http://redsymbol.net/articles/unofficial-bash-strict-mode/)
+
+[Shell Style Guide](https://google.github.io/styleguide/shell.xml)
+
 ## Thanks
 
 Thanks to [Tiny Bash Server](https://github.com/sayanriju/Tiny-Bash-Server) 
