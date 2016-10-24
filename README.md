@@ -334,7 +334,7 @@ SERVER_NAME 	Your server's fully qualified domain name (e.g. www.cgi101.com)
 SERVER_PORT 	The port number your server is listening on
 SERVER_SOFTWARE The server software you're using (e.g. Apache 1.3) 
 ```
-## Links
+## Links Bash scripting
 [Advanced Bash-Scripting Guide](http://www.tldp.org/LDP/abs/html/)
 
 [Bash Cheatsheet](http://bruxy.regnet.cz/linux/bash_cheatsheet/bash_cheatsheet.html)
@@ -347,6 +347,20 @@ SERVER_SOFTWARE The server software you're using (e.g. Apache 1.3)
 
 [Shell Style Guide](https://google.github.io/styleguide/shell.xml)
 
+## Links Webdesign
+[Startup Framework](http://designmodo.com/startup/)
+
+[Twitter bootstrap](http://getbootstrap.com/getting-started/)
+
+[Design elements, playground and code snippets for Bootstrap](http://bootsnipp.com/)
+
+[Bootstrap 3 Tutorial and more](http://www.w3schools.com/Bootstrap/)
+
+[Spritely creating dynamic character and background animation](http://spritely.net/)
+
+[HUGO a fast and flexible static site generator](https://gohugo.io/overview/introduction)
+
+[superscrollorama jQuery plugin for supercool scroll animation](http://johnpolacek.github.io/superscrollorama/)
 ## Thanks
 
 Thanks to [Tiny Bash Server](https://github.com/sayanriju/Tiny-Bash-Server) 
