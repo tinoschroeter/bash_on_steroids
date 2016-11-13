@@ -1,4 +1,5 @@
 #!/bin/bash
+install() {
 dpkg -l|grep nginx >/dev/null && dpkg -l|grep fcgiwrap >/dev/null \
 || apt-get update; apt-get install -y nginx fcgiwrap git
 pwd=$(pwd)
@@ -21,5 +22,11 @@ server {
                    }
         }  
 EOF
-test -d www || mkdir www
-service nginx restart
+service nginx restart && service fcgiwrap restart 
+}
+
+if [ "$(id -u)" == "0" ]; then
+  install 
+else
+  sudo bash -c $0
+fi
