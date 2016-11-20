@@ -347,6 +347,8 @@ SERVER_SOFTWARE The server software you're using (e.g. Apache 1.3)
 
 [Shell Style Guide](https://google.github.io/styleguide/shell.xml)
 
+[bashoneliners](http://www.bashoneliners.com/oneliners/oneliner/popular/)
+
 ## Links Webdesign
 [Startup Framework](http://designmodo.com/startup/)
 
