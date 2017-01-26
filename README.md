@@ -149,7 +149,7 @@ generate www/example.cgi file...
 ```
 ![screenshot](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wlan.png)
 
-### login wabapp ecample_
+### login wabapp example_
 ```sh
 <!DOCTYPE html>
 <html lang="de">
