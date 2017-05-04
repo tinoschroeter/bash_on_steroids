@@ -2,12 +2,12 @@
 
 ## Table of content
 
-- [File Operators](File_Operators)
-- [String Operators](String_Operators)
-- [String Manipulation](String_Manipulation)
-- [Arrays](Arrays)
-- [Hashes](Hashes)
-- [Here Document](Here_Document)
+- [File Operators](#File_Operators)
+- [String Operators](#String_Operators)
+- [String Manipulation](#String_Manipulation)
+- [Arrays](#Arrays)
+- [Hashes](#Hashes)
+- [Here Document](#Here_Document)
 
 
 ### File_Operators
