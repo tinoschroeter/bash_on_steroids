@@ -16,7 +16,7 @@
 -  [nginx config](#nginx-config)
 -  [use sudo](#use-sudo-in-your-CGI-scripts)
 -  [Environment Variables](#Environment-Variables)
--  [Bash Cheat Sheet](#BashCheatSheet.md)
+-  [Bash Cheat Sheet](https://github.com/tinoschroeter/bash_on_steroids/blob/master/BashCheatSheet.md)
 -  [LINKS](#links)
 
 ### Install
