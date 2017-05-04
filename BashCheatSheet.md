@@ -2,10 +2,15 @@
 
 ## Table of content
 
-- [File Operators](FileOperators)
+- [File Operators](File Operators)
+- [String Operators](String Operators)
+- [String Manipulation](String Manipulation)
+- [Arrays](Arrays)
+- [Hashes](Hashes)
+- [Here Document](Here Document)
 
 
-### FileOperators
+### File Operators
 
 The complete list of bash 4.2 test operators:
 ```
@@ -36,4 +41,91 @@ FILE1 -nt FILE2  True if file1 is newer than file2 (according to modification da
 FILE1 -ot FILE2  True if file1 is older than file2.
   
 FILE1 -ef FILE2  True if file1 is a hard link to file2.
+```
+
+### String Operators
+
+The complete list of bash 4.2 string operators:
+```
+-z STRING            True if string is empty.
+    
+-n STRING            True if string is not empty.
+    
+STRING1 = STRING2    True if the strings are equal.
+
+STRING1 != STRING2   True if the strings are not equal.
+
+STRING1 < STRING2    True if STRING1 sorts before STRING2 lexicographically.
+
+STRING1 > STRING2    True if STRING1 sorts after STRING2 lexicographically.
+```
+### String Manipulation
+
+```
+${str:position}			# substring starting at position
+${str:position:len}		# substring starting at position with length len
+${str#ubstring}			# delete shortest match from front
+${str##substring}		# delete longest match from front
+${str%substring}		# delete shortest match from back
+${str%%substring}		# delete longest match from back
+${str/pattern/replacement}	# pattern replace
+${str/#pattern/replacement}	# pattern replace at front
+${str/%pattern/replacement}	# pattern replace at end
+${str//pattern/replacement}	# global pattern replace
+```
+
+### Arrays
+
+Indexed arrays require no declaration
+```
+arr=("string 1", "string 2", "string 3")
+arr=([1]="string 1", [2]="string 2", [3]="string 3")
+
+arr[4]="string 4"
+```
+
+Check below under "Hashes" for accessing the different properties of an array.
+
+### Hashes
+
+Since Bash v4 Hashes need declaration!
+```
+declare -A arr
+
+# Assigning values to associative arrays
+arr[my key]="my value"
+arr["my key"]="my value"
+arr[$my_key]="my value"
+
+# Fetching values
+echo ${arr[my key]}
+echo ${arr["my key"]}
+echo ${arr[$my_key]}
+
+# Accessing the array
+${arr[@]}         # Returns all indizes and their items (doesn't work with associative arrays)
+${arr[*]}         # Returns all items
+${!arr[*]}        # Returns all indizes
+${#arr[*]}        # Number elements
+${#arr[$n]}       # Length of $nth item
+
+# Pushing to array
+arr+=("new string value", "another new value")
+```
+### Here Document
+
+Bash allow here documents like this
+
+```
+cat <<EOT
+[...]
+EOT
+
+To disable substitution in the here doc text quote the marker with single or double quotes.
+
+cat <<'EOT'
+
+To strip leading tabs use
+
+cat <<-EOT
 ```
