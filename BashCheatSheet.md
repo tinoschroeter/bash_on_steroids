@@ -1,13 +1,12 @@
 ## Bash Cheat Sheet
 
-## Table of content
-
 - [File Operators](#File_Operators)
 - [String Operators](#String_Operators)
 - [String Manipulation](#String_Manipulation)
 - [Arrays](#Arrays)
 - [Hashes](#Hashes)
 - [Here Document](#Here_Document)
+- [Misc](#Misc)
 
 
 ### File_Operators
@@ -129,3 +128,5 @@ To strip leading tabs use
 
 cat <<-EOT
 ```
+
+### Misc
