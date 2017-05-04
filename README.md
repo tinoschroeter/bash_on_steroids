@@ -16,6 +16,7 @@
 -  [nginx config](#nginx-config)
 -  [use sudo](#use-sudo-in-your-CGI-scripts)
 -  [Environment Variables](#Environment-Variables)
+-  [Bash Cheat Sheet](#BashCheatSheet.md)
 -  [LINKS](#links)
 
 ### Install
