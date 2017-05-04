@@ -2,15 +2,15 @@
 
 ## Table of content
 
-- [File Operators](File Operators)
-- [String Operators](String Operators)
-- [String Manipulation](String Manipulation)
+- [File Operators](File_Operators)
+- [String Operators](String_Operators)
+- [String Manipulation](String_Manipulation)
 - [Arrays](Arrays)
 - [Hashes](Hashes)
-- [Here Document](Here Document)
+- [Here Document](Here_Document)
 
 
-### File Operators
+### File_Operators
 
 The complete list of bash 4.2 test operators:
 ```
@@ -43,7 +43,7 @@ FILE1 -ot FILE2  True if file1 is older than file2.
 FILE1 -ef FILE2  True if file1 is a hard link to file2.
 ```
 
-### String Operators
+### String_Operators
 
 The complete list of bash 4.2 string operators:
 ```
@@ -59,7 +59,7 @@ STRING1 < STRING2    True if STRING1 sorts before STRING2 lexicographically.
 
 STRING1 > STRING2    True if STRING1 sorts after STRING2 lexicographically.
 ```
-### String Manipulation
+### String_Manipulation
 
 ```
 ${str:position}			# substring starting at position
@@ -112,7 +112,7 @@ ${#arr[$n]}       # Length of $nth item
 # Pushing to array
 arr+=("new string value", "another new value")
 ```
-### Here Document
+### Here_Document
 
 Bash allow here documents like this
 
