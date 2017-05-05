@@ -9,7 +9,7 @@
 - [Misc](#Misc)
 
 
-### File_Operators
+# File_Operators
 
 The complete list of bash 4.2 test operators:
 ```
@@ -42,7 +42,7 @@ FILE1 -ot FILE2  True if file1 is older than file2.
 FILE1 -ef FILE2  True if file1 is a hard link to file2.
 ```
 
-### String_Operators
+# String_Operators
 
 The complete list of bash 4.2 string operators:
 ```
@@ -58,7 +58,7 @@ STRING1 < STRING2    True if STRING1 sorts before STRING2 lexicographically.
 
 STRING1 > STRING2    True if STRING1 sorts after STRING2 lexicographically.
 ```
-### String_Manipulation
+# String_Manipulation
 
 ```
 ${str:position}			# substring starting at position
@@ -73,7 +73,7 @@ ${str/%pattern/replacement}	# pattern replace at end
 ${str//pattern/replacement}	# global pattern replace
 ```
 
-### Arrays
+# Arrays
 
 Indexed arrays require no declaration
 ```
@@ -85,7 +85,7 @@ arr[4]="string 4"
 
 Check below under "Hashes" for accessing the different properties of an array.
 
-### Hashes
+# Hashes
 
 Since Bash v4 Hashes need declaration!
 ```
@@ -111,7 +111,7 @@ ${#arr[$n]}       # Length of $nth item
 # Pushing to array
 arr+=("new string value", "another new value")
 ```
-### Here_Document
+# Here_Document
 
 Bash allow here documents like this
 
@@ -129,4 +129,4 @@ To strip leading tabs use
 cat <<-EOT
 ```
 
-### Misc
+# Misc
