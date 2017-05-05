@@ -5,12 +5,15 @@
 - [String Manipulation](#String_Manipulation)
 - [Arrays](#Arrays)
 - [Hashes](#Hashes)
+- [Conditionals](#Conditionals)
+   - [if](#if)
+   - [case](#case)
 - [Loops](#Loops)
    - [for](#for)
    - [while](#while)
    - [until](#until)
 - [Here Document](#Here_Document)
-- [Misc](#Misc)
+- [Example](#Example)
 
 
 ### File_Operators
@@ -115,6 +118,43 @@ ${#arr[$n]}       # Length of $nth item
 # Pushing to array
 arr+=("new string value", "another new value")
 ```
+## Conditionals
+
+### if
+```
+if [ "foo" = "foo" ]; then
+  echo expression evaluated as true
+fi
+```
+```
+if [ "foo" = "foo" ]; then
+  echo expression evaluated as true
+else
+  echo expression evaluated as false
+fi
+```
+```
+if [ $var1  -eq $var2 ]; then
+  echo var1 is equal to var2
+elif [ $var1 -gt $var2 ]
+  echo var1 is greater then var2
+fi
+
+```
+
+### case
+```
+case "$1" in
+1)
+  echo is 1
+2)
+ echo ist 2
+3|4)
+  echo is 3 or 4
+*)
+  echo is everything else
+esac
+```
 
 ## Loops
 
@@ -122,13 +162,31 @@ arr+=("new string value", "another new value")
 ```
 for i in {1..10};do echo $i;done
 ```
+```
+for i in $(ls);do
+  echo $i
+done
+```
 ### while 
 ```
-while :;do echo "hello";done
+while :;do 
+  echo "hello"
+done
+```
+```
+COUNTER=0
+while [  $COUNTER -lt 10 ]; do
+  echo The counter is $COUNTER
+  (( COUNTER++ ))
+done
 ```
 ### until
 ```
-
+COUNTER=20
+until [  $COUNTER -lt 10 ]; do
+  echo COUNTER $COUNTER
+  (( COUNTER-- ))
+done
 ```
 
 ### Here_Document
@@ -149,4 +207,36 @@ To strip leading tabs use
 cat <<-EOT
 ```
 
-### Misc
+### Example
+
+#### Initscript example
+```
+case "$1" in
+        start)
+            start
+            ;;
+         
+        stop)
+            stop
+            ;;
+         
+        status)
+            status anacron
+            ;;
+        restart)
+            stop
+            start
+            ;;
+        condrestart)
+            if test "x`pidof anacron`" != x; then
+                stop
+                start
+            fi
+            ;;
+         
+        *)
+            echo $"Usage: $0 {start|stop|restart|condrestart|status}"
+            exit 1
+ 
+esac
+```
