@@ -83,7 +83,7 @@ ${str//pattern/replacement}	# global pattern replace
 ### Arrays
 
 Indexed arrays require no declaration
-```
+```bash
 arr=("string 1", "string 2", "string 3")
 arr=([1]="string 1", [2]="string 2", [3]="string 3")
 
@@ -95,7 +95,7 @@ Check below under "Hashes" for accessing the different properties of an array.
 ### Hashes
 
 Since Bash v4 Hashes need declaration!
-```
+```bash
 declare -A arr
 
 # Assigning values to associative arrays
@@ -121,19 +121,19 @@ arr+=("new string value", "another new value")
 ## Conditionals
 
 ### if
-```
+```bash
 if [ "foo" = "foo" ]; then
   echo expression evaluated as true
 fi
 ```
-```
+```bash
 if [ "foo" = "foo" ]; then
   echo expression evaluated as true
 else
   echo expression evaluated as false
 fi
 ```
-```
+```bash
 if [ $var1  -eq $var2 ]; then
   echo var1 is equal to var2
 elif [ $var1 -gt $var2 ]
@@ -143,7 +143,7 @@ fi
 ```
 
 ### case
-```
+```bash
 case "$1" in
 1)
   echo is 1
@@ -159,21 +159,21 @@ esac
 ## Loops
 
 ### for 
-```
+```bash
 for i in {1..10};do echo $i;done
 ```
-```
+```bash
 for i in $(ls);do
   echo $i
 done
 ```
 ### while 
-```
+```bash
 while :;do 
   echo "hello"
 done
 ```
-```
+```bash
 COUNTER=0
 while [  $COUNTER -lt 10 ]; do
   echo The counter is $COUNTER
