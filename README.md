@@ -3,21 +3,21 @@
 
 ## Table of content
 
--  [Install](#Install)
--  [Features](#Features)
--  [Usage](#Usage)
--  [Examples](#Examples)
-    - [list example](#list-example_) 
-    - [form example](#form-example_)
-    - [WLAN Webapp](#WLAN-configuration-Webapp_)
-    - [login wabapp example](#login wabapp example_)
-    - [upload example](#upload_example_)
-    - [MySQL example](#mysql_example_)
--  [nginx config](#nginx-config)
--  [use sudo](#use-sudo-in-your-CGI-scripts)
--  [Environment Variables](#Environment-Variables)
--  [Bash Cheat Sheet](https://github.com/tinoschroeter/bash_on_steroids/blob/master/BashCheatSheet.md)
--  [LINKS](#links)
+  * [Install](#Install)
+  * [Features](#Features)
+  * [Usage](#Usage)
+  * [Examples](#Examples)
+    *  [list example](#list-example_) 
+    * [form example](#form-example_)
+    * [WLAN Webapp](#WLAN-configuration-Webapp_)
+    * [login wabapp example](#login wabapp example_)
+    * [upload example](#upload_example_)
+    * [MySQL example](#mysql_example_)
+  *  [nginx config](#nginx-config)
+  *  [use sudo](#use-sudo-in-your-CGI-scripts)
+  *  [Environment Variables](#Environment-Variables)
+  *  [Bash Cheat Sheet](https://github.com/tinoschroeter/bash_on_steroids/blob/master/BashCheatSheet.md)
+  *  [LINKS](#links)
 
 ### Install
 ```
