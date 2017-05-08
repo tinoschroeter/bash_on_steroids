@@ -1,19 +1,19 @@
 ## Bash Cheat Sheet
 
-* [File Operators](#File_Operators)
-* [String Operators](#String_Operators)
-* [String Manipulation](#String_Manipulation)
-* [Arrays](#Arrays)
-* [Hashes](#Hashes)
-* [Conditionals](#Conditionals)
+   * [File Operators](#File_Operators)
+   * [String Operators](#String_Operators)
+   * [String Manipulation](#String_Manipulation)
+   * [Arrays](#Arrays)
+   * [Hashes](#Hashes)
+   * [Conditionals](#Conditionals)
    * [if](#if)
    * [case](#case)
-* [Loops](#Loops)
+   * [Loops](#Loops)
    * [for](#for)
    * [while](#while)
    * [until](#until)
-* [Here Document](#Here_Document)
-* [Example](#Example)
+   * [Here Document](#Here_Document)
+   * [Example](#Example)
 
 
 File_Operators
