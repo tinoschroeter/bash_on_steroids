@@ -181,7 +181,7 @@ while [  $COUNTER -lt 10 ]; do
 done
 ```
 ### until
-```
+```bash
 COUNTER=20
 until [  $COUNTER -lt 10 ]; do
   echo COUNTER $COUNTER
@@ -193,7 +193,7 @@ done
 
 Bash allow here documents like this
 
-```
+```bash
 cat <<EOT
 [...]
 EOT
@@ -210,7 +210,7 @@ cat <<-EOT
 ### Example
 
 #### Initscript example
-```
+```bash
 case "$1" in
         start)
             start
