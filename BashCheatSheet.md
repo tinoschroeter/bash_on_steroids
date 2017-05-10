@@ -13,8 +13,10 @@
     * [while](#while)
     * [until](#until)
   * [Here Document](#Here_Document)
+  * [function](#function)
   * [Example](#Example)
-
+    * [ Initscript](#Initscript)
+    
 
 File_Operators
 ==============
@@ -221,6 +223,15 @@ To strip leading tabs use
 
 cat <<-EOT
 ```
+Function
+=========
+
+```bash
+foobar() {
+  echo "hello"
+}
+foobar
+```
 
 Example
 =======
@@ -256,3 +267,40 @@ case "$1" in
  
 esac
 ```
+
+#### count example
+
+```bash
+count=1
+for i in $(ls); do
+  echo $count
+  count=$((count+1))
+done
+```
+
+#### yes/no example
+```bash
+echo -en "Type \"\033[41;1myes\033[0m\" when you're really sure: "
+read answer
+echo
+if [[ $(echo $answer | tr "[A-Z]" "[a-z]") == "yes" ]] ; then
+    echo -e "Waiting 5 secs. Press Ctrl-C to abort."
+    for n in 5 4 3 2 1 ; do
+        echo -n "$n ";sleep 1
+    done
+echo "continue..."
+```
+#### template
+```bash
+```
+
+
+
+
+
+
+ 
+
+
+
+
