@@ -26,13 +26,13 @@ $ cd /var/www/newProject
 $ ./install
 ```
 ### Features
-- easy to use  <?bash echo "Hello" ?>
+- easy to use  ```sh<?bash echo "Hello" ?>```
 - write fast wabapps in simpe bash script style
 - QUERY_STRING variables can used as normal bash variables 
 - (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
 
 ### Usage:
-All bash codes are to be enclosed within <?bash ... ?> or in short, <? ... ?> tags. 
+All bash codes are to be enclosed within ```sh<?bash ... ?> or in short, <? ... ?>``` tags. 
 ```
 $:/var/www/newProject vim template/example.htsh
 $:/var/www/newProject./build.sh 
