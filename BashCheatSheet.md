@@ -294,11 +294,15 @@ echo "continue..."
 #### MySQL example
 ```bash
 echo "USE database
-      DROP TABLE ${host}"| mysql -u $user -h $mysqlserver
+  DROP TABLE ${host}"| mysql -u $user -h $mysqlserver
 ```
 ```bash
 echo "USE database
-      CREATE TABLE ${host} (id INT,package VARCHAR(20),version VARCHAR(20),repo VARCHAR(20));"| mysql -u $user -h $mysqlserver
+  CREATE TABLE ${host} (id INT,package VARCHAR(20),version VARCHAR(20),repo VARCHAR(20));"| mysql -u $user -h $mysqlserver
+```
+```bash
+echo "USE databas
+  INSERT INTO ${host} (id,package,version,repo) VALUES(\"$id\",\"$package\",\"$version\",\"$repo\");"| mysql -u $user -h $mysqlserver
 ```
 
 #### template
