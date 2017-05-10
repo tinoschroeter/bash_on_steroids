@@ -26,7 +26,7 @@ $ cd /var/www/newProject
 $ ./install
 ```
 ### Features
-- easy to use
+- easy to use  <?bash echo "Hello" ?>
 - write fast wabapps in simpe bash script style
 - QUERY_STRING variables can used as normal bash variables 
 - (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
