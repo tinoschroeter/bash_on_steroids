@@ -290,6 +290,17 @@ if [[ $(echo $answer | tr "[A-Z]" "[a-z]") == "yes" ]] ; then
     done
 echo "continue..."
 ```
+
+#### MySQL example
+```bash
+echo "USE database
+      DROP TABLE ${host}"| mysql -u $user -h $mysqlserver
+```
+```bash
+echo "USE database
+      CREATE TABLE ${host} (id INT,package VARCHAR(20),version VARCHAR(20),repo VARCHAR(20));"| mysql -u $user -h $mysqlserver
+```
+
 #### template
 ```bash
 ```
