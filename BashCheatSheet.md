@@ -15,8 +15,10 @@
   * [Here Document](#Here_Document)
   * [function](#function)
   * [Example](#Example)
-    * [ Initscript](#Initscript)
-    
+    * [Initscript](#Initscript)
+    * [count example](count example)
+    * [yes/no example](yes/no example)
+    * [MySQL example](MySQL example)    
 
 File_Operators
 ==============
