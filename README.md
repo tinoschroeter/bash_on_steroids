@@ -323,6 +323,7 @@ HTTPS 	        "on" if the program is being called through a secure server
 PATH 	        The system path your server is running under
 QUERY_STRING 	The query string (see GET, below)
 REMOTE_ADDR 	The IP address of the visitor
+HTTP_X_CLIENT   The IP address of the visitor, if you are using reverse proxy
 REMOTE_HOST 	The hostname of the visitor (if your server has reverse-name-lookups on; otherwise this is the IP address again)
 REMOTE_PORT 	The port the visitor is connected to on the web server
 REMOTE_USER 	The visitor's username (for .htaccess-protected pages)
@@ -333,7 +334,9 @@ SCRIPT_NAME 	The interpreted pathname of the current CGI (relative to the docume
 SERVER_ADMIN 	The email address for your server's webmaster
 SERVER_NAME 	Your server's fully qualified domain name (e.g. www.cgi101.com)
 SERVER_PORT 	The port number your server is listening on
-SERVER_SOFTWARE The server software you're using (e.g. Apache 1.3) 
+SERVER_SOFTWARE The server software you're using (e.g. Apache 1.3, nginx/1.10.3 etc.
+
+env > /tmp/Environment_Variables  
 ```
 ## Links Bash scripting
 [Advanced Bash-Scripting Guide](http://www.tldp.org/LDP/abs/html/)

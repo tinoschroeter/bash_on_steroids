@@ -20,6 +20,7 @@
     * [yes/no example](yes/no example)
     * [MySQL example](MySQL example)    
 
+
 File_Operators
 ==============
 
@@ -317,7 +318,6 @@ echo "USE databas
 
 
  
-
 
 
 
