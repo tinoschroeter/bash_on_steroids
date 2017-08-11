@@ -360,6 +360,8 @@ env > /tmp/Environment_Variables
 
 [Design elements, playground and code snippets for Bootstrap](http://bootsnipp.com/)
 
+[Twitter bootstrap components](https://getbootstrap.com/docs/3.3/components/)
+
 [Bootstrap 3 Tutorial and more](http://www.w3schools.com/Bootstrap/)
 
 [Spritely creating dynamic character and background animation](http://spritely.net/)
