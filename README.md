@@ -7,7 +7,7 @@
 - QUERY_STRING and POST_STRING variables can used as normal bash variables 
 - (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
 
-### Install
+### Install Apache2
 ```bash
 apt-get update; apt-get install -y apache2
 tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
@@ -31,7 +31,9 @@ tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
 EOF
 a2enmod cgid
 service apache2 restart
-
+```
+### install BoS
+```bash
 mkdir -p /var/www/newProject
 git clone https://github.com/tinoschroeter/bash_on_steroids.git /var/www/newProject
 cd /var/www/newProject
