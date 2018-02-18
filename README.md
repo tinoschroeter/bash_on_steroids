@@ -31,7 +31,7 @@ All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?
 </html>
 ```
 
-## buld
+## build
 ```
 $ /var/www/newProject vim index.htsh
 $ /var/www/newProject./bos.sh 
