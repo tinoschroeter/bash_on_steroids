@@ -34,7 +34,6 @@ service apache2 restart
 ```
 ### install BoS
 ```shell
-mkdir -p /var/www/newProject
 git clone https://github.com/tinoschroeter/bash_on_steroids.git /var/www/newProject
 cd /var/www/newProject
 ./bos
@@ -76,6 +75,8 @@ sudo ./bos.sh
 open http://localhost:8080/
 ```
 ![STvsSW](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/stvssw.jpg)
+
+<space><space>
 
 [Wiki -->](https://github.com/tinoschroeter/bash_on_steroids/wiki)
 ![wiki](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wiki.jpg "wiki")
