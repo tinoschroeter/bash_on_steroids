@@ -1,4 +1,4 @@
-## Use !#bash scrpts for writing beautiful web apps.
+## Use !#bash scrpts for writing beautiful web apps  :sparkles:
 ![pageres](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/like_a_boss.png)
 
 ### Features
