@@ -1,88 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="/static/favicon.ico">
-
-    <title>Bash on stereoids</title>
-
-    <!-- Bootstrap core CSS -->
-    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="/static/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="jumbotron-narrow.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="/static/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="/static/assets/js/ie-emulation-modes-warning.js"></script>
-
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <title>Star Trek vs Star Wars!</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <meta name="keywords" content="docker-compose, docker, stack">
+    <meta name="author" content="Tutum dev team">
+    <link rel='stylesheet' href="static/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   </head>
-
+<?bash 
+if [ "$vote" = "a" ];then
+c=$(cat /tmp/a)
+a=$(( $c +1 ))
+echo $a > /tmp/a
+elif [ "$vote" = "b" ];then 
+c=$(cat /tmp/b)
+b=$(( $c +1 ))
+echo $b > /tmp/b
+fi
+?>
   <body>
-
-    <div class="container">
-      <div class="header clearfix">
-        <nav>
-          <ul class="nav nav-pills pull-right">
-            <li role="presentation" class="active"><a href="#">Home</a></li>
-            <li role="presentation"><a href="#">About</a></li>
-            <li role="presentation"><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-        <h3 class="text-muted"><?bash pwd ?></h3>
-      </div>
-
-      <div class="jumbotron">
-        <h2><?bash uname -a ?></h2>
-        <p class="lead"><?bash id ?></p>
-        <p><a class="btn btn-lg btn-success" href="https://github.com/tinoschroeter/bash_on_steroids" role="button">Sign up today</a></p>
-      </div>
-
-      <div class="row marketing">
-        <div class="col-lg-6">
-          <h4>df -h</h4>
-          <p><?bash df -h|sed 's/$/<br>/' ?></p>
-
-          <h4><?bash echo "free" ?></h4>
-          <p><?bash free|sed 's/$/<br>/' ?></p>
-
-          <h4>Ifconfig</h4>
-          <p><?bash ifconfig|sed 's/$/<br>/' ?></p>
+    <div id="content-container">
+      <div id="content-container-center">
+        <h3>Star Trek vs Star Wars!</h3>
+        <form id="choice" name='form' method="POST" action="/">
+          <button id="a" type="submit" name="vote" class="a" value="a">Star Trek</button>
+          <button id="b" type="submit" name="vote" class="b" value="b">Star Wars</button>
+        </form>
+        <div id="tip">
+         <?bash
+         trek=$(cat /tmp/a) || trek=0
+         echo "Star Trek $trek votes<br>"
+         wars=$(cat /tmp/b) || wars=0
+         echo "Star Wars $wars votes<br>"
+         ?>
         </div>
-
-        <div class="col-lg-6">
-          <h4>Uptime</h4>
-          <p><?bash uptime ?></p>
-
-          <h4>Subheading</h4>
-          <p>Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum.</p>
-
-          <h4>Subheading</h4>
-          <p>Maecenas sed diam eget risus varius blandit sit amet non magna.</p>
-        </div>
+       </div>
       </div>
+    </div>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 
-      <footer class="footer">
-        <p>&copy; 2016 Company, Inc.</p>
-      </footer>
-
-    </div> <!-- /container -->
-
-
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="/static/assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>
