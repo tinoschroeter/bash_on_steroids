@@ -46,3 +46,5 @@ sudo ./bos.sh
 
 open http://localhost:8080/
 ```
+
+[Wiki](https://github.com/tinoschroeter/bash_on_steroids/wiki)
