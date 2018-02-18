@@ -65,6 +65,9 @@ $ index.htsh --->> /usr/lib/cgi-bin/index.cgi
 ```
 ### Vagrant
 ```shell
+git clone https://github.com/tinoschroeter/bash_on_steroids.git
+cd bash_on_steroids
+
 vagrant up
 vagrant ssh
 cd /var/www/html/
