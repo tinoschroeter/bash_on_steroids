@@ -16,7 +16,7 @@ $ ./bos
 
 ### Usage:
 All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?>``` tags. 
-```
+```html
 <!DOCTYPE html>
 <html>
  <body>
