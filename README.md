@@ -58,13 +58,12 @@ All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?
 ```
 
 ## build
-```
-$ /var/www/newProject vim index.htsh
-$ /var/www/newProject./bos.sh 
+```bash
+$ ./bos.sh 
 $ index.htsh --->> /usr/lib/cgi-bin/index.cgi
 ```
 ### Vagrant
-```
+```bash
 vagrant up
 vagrant ssh
 cd /var/www/html/
