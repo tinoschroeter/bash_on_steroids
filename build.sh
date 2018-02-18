@@ -90,6 +90,8 @@ done < "$1"
 for i in $(ls |grep 'htsh$');do
 if [ $i -nt ${cgi_path}$(echo $i|sed 's/htsh/cgi/g') ];then
 echo "$i --->> ${cgi_path}$(echo $i|sed 's/htsh/cgi/g')"
-bos $i ${cgi_path}$(echo $i|sed 's/htsh/cgi/g')
+for run in  "bos" "chmod +x";do
+$run $i ${cgi_path}$(echo $i|sed 's/htsh/cgi/g')
+done
 fi
 done
