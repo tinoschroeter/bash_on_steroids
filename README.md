@@ -48,7 +48,7 @@ All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?
  <body>
  <ul>
     <?bash
-      for i in Buzz Rex Bo Hamm Slink Potato; do 
+      for i in Buzz Rex Bo Hamm Slink Potato; do  ![list](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/lists.png)
         echo "<li>$i</li>"
       done
       ?>
