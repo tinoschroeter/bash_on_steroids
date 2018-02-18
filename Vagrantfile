@@ -1,5 +1,6 @@
 $script = <<SCRIPT
 apt-get update; apt-get install -y apache2
+rm /var/www/html/index.html
 tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
 <VirtualHost *:80>
 	ServerName example.org
