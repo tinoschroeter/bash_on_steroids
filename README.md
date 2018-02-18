@@ -76,7 +76,7 @@ open http://localhost:8080/
 ```
 ![STvsSW](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/stvssw.jpg)
 
-<space><space>
+---
 
 [Wiki -->](https://github.com/tinoschroeter/bash_on_steroids/wiki)
 ![wiki](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wiki.jpg "wiki")
