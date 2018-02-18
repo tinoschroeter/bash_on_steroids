@@ -17,7 +17,32 @@ $ ./bos
 ### Usage:
 All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?>``` tags. 
 ```
+<!DOCTYPE html>
+<html>
+ <body>
+ <ul>
+    <?bash
+      for i in Buzz Rex Bo Hamm Slink Potato; do 
+        echo "<li>$i</li>"
+      done
+      ?>
+</ul>
+</body>
+</html>
+```
+
+## buld
+```
 $ /var/www/newProject vim index.htsh
 $ /var/www/newProject./bos.sh 
 $ index.htsh --->> /usr/lib/cgi-bin/index.cgi
+```
+### Vagrant
+```
+vagrant up
+vagrant ssh
+cd /var/www/html/
+sudo ./bos.sh
+
+open http://localhost:8080/
 ```
