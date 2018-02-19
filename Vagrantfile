@@ -1,3 +1,5 @@
+Vagrant::DEFAULT_SERVER_URL.replace('https://vagrantcloud.com')
+
 $script = <<SCRIPT
 apt-get update; apt-get install -y apache2
 rm /var/www/html/index.html
