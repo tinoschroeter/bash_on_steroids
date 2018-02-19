@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Star Trek vs Star Wars!</title>
+    <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
+    <meta name="keywords" content="docker-compose, docker, stack">
+    <meta name="author" content="Tutum dev team">
+    <link rel='stylesheet' href="static/css/style.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+ </head>
+<?bash 
+if [ "$vote" = "a" ];then
+  c=$(cat /tmp/a)
+  a=$(( $c +1 ))
+  echo $a > /tmp/a
+elif [ "$vote" = "b" ];then 
+  c=$(cat /tmp/b)
+  b=$(( $c +1 ))
+  echo $b > /tmp/b
+fi
+?>
+  <body>
+    <div id="content-container">
+      <div id="content-container-center">
+        <h3>Star Trek vs Star Wars!</h3>
+        <p><?bash uptime | sed 's/average//g' ?></p>
+        <form id="choice" name='form' method="POST" action="/">
+          <button id="a" type="submit" name="vote" class="a" value="a">Star Trek</button>
+          <button id="b" type="submit" name="vote" class="b" value="b">Star Wars</button>
+        </form>
+        <div id="tip">
+         <?bash
+         trek=$(cat /tmp/a) || trek=0
+           echo "Star Trek $trek votes<br>"
+         wars=$(cat /tmp/b) || wars=0
+           echo "Star Wars $wars votes<br>"
+         ?>
+        </div>
+       </div>
+      </div>
+    </div>
+  </body>
+</html>
+
