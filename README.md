@@ -78,11 +78,11 @@ open http://localhost:8080/
 
 ## DEMO
 
-  * [Vote Star Trek vs Star Wars](https://vote.tino-schroeter.de)
-  * [Markdown Wiki](https://wiki.tino-schroeter.de)
-  * [VM Management tool](https://vmtool.tino-schroeter.de)
-  * [WLAN config tool](https://wlan.tino-schroeter.de)
-  * [login](https://login.tino-schroeter.de)
+  * [Vote Star Trek vs Star Wars](https://vote.tino-schroeter.de) (not ready)
+  * [Markdown Wiki](https://wiki.tino-schroeter.de) (not ready)
+  * [VM Management tool](https://vmtool.tino-schroeter.de) (not ready)
+  * [WLAN config tool](https://wlan.tino-schroeter.de) (not ready)
+  * [login](https://login.tino-schroeter.de) (not ready)
 
 ## Wiki
 
