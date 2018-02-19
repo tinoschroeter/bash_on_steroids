@@ -78,7 +78,7 @@ open http://localhost:8080/
 
 ## DEMO
 
-  * [Vote Star Trek vs Star Wars](https://vote.tino-schroeter.de) (not ready) [source](/blob/master/DEMO)
+  * [Vote Star Trek vs Star Wars](https://vote.tino-schroeter.de) (not ready) [source](/tree/master/DEMO/vote)
   * [Markdown Wiki](https://wiki.tino-schroeter.de) (not ready) [source](/blob/master/DEMO)
   * [VM Management tool](https://vmtool.tino-schroeter.de) (not ready) [source](/blob/master/DEMO)
   * [WLAN config tool](https://wlan.tino-schroeter.de) (not ready) [source](/blob/master/DEMO)
