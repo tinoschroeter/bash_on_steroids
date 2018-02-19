@@ -88,6 +88,11 @@ open http://localhost:8080/
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wlan)
   * [login](https://login.tino-schroeter.de) (not ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/login)
+  * [guestbook](https://guestbook.tino-schroeter.de) (not ready)
+[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/guestbook)
+  * [todo](https://todo.tino-schroeter.de) (not ready)
+[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/todo)
+
 
 ## Wiki
 
