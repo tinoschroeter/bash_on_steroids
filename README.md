@@ -76,6 +76,14 @@ open http://localhost:8080/
 ```
 ![STvsSW](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/stvssw.jpg)
 
+## DEMO
+
+  * [Vote Star Trek vs Star Wars](https://vote.tino-schroeter.de)
+  * [Markdown Wiki](https://wiki.tino-schroeter.de)
+  * [VM Management tool](https://vmtool.tino-schroeter.de)
+  * [WLAN config tool](https://wlan.tino-schroeter.de)
+  * [login](https://login.tino-schroeter.de)
+
 ## Wiki
 
 [Wiki -->](https://github.com/tinoschroeter/bash_on_steroids/wiki)
