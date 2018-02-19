@@ -10,14 +10,25 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
  </head>
 <?bash 
-if [ "$vote" = "a" ];then
+voteing="no"
+if grep $HTTP_X_FORWARDED_FOR /tmp/voting > /dev/null;then
+voteing="yes"
+fi
+
+vote() {
+  echo "$HTTP_X_FORWARDED_FOR" >> /tmp/voting
+}
+
+if [ "$vote" = "a" ] && [ "$voteing" = "no" ];then
   c=$(cat /tmp/a)
   a=$(( $c +1 ))
   echo $a > /tmp/a
-elif [ "$vote" = "b" ];then 
+  vote
+elif [ "$vote" = "b" ] && [ "$voteing" = "no" ];then 
   c=$(cat /tmp/b)
   b=$(( $c +1 ))
   echo $b > /tmp/b
+  vote
 fi
 ?>
   <body>
@@ -35,6 +46,7 @@ fi
            echo "Star Trek $trek votes<br>"
          wars=$(cat /tmp/b) || wars=0
            echo "Star Wars $wars votes<br>"
+           echo "<br> you've already voted!"
          ?>
         </div>
        </div>
