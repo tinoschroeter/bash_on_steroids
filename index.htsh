@@ -8,7 +8,21 @@
     <meta name="author" content="Tutum dev team">
     <link rel='stylesheet' href="static/css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  </head>
+<?bash 
+proz=0
+wars=$(cat /tmp/b) || wars=0 
+if [ $wars -gt 0 ];then
+  trek=$(cat /tmp/a) || trek=0
+  sum=$(( $wars + $trek ))
+  proz=$(( $trek * 100 / $sum ))
+fi
+?>
+<style>
+body{
+<?bash echo "background: linear-gradient(to bottom, white $proz%, black) !important;" ?>
+} 
+</style>
+ </head>
 <?bash 
 if [ "$vote" = "a" ];then
   c=$(cat /tmp/a)
