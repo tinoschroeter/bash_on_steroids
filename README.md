@@ -92,6 +92,8 @@ open http://localhost:8080/
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/guestbook)
   * [todo](https://todo.tino-schroeter.de) (not ready)
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/todo)
+  * [show environment variables](https://env.tino-schroeter.de) (not ready)
+[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/env)
 
 
 ## Wiki

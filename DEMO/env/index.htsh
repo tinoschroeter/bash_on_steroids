@@ -1,0 +1,7 @@
+<?bash
+IFS=$'\n'
+
+for i in $(env);do
+  echo "$i<br>"
+done
+?>
