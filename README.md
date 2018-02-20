@@ -80,6 +80,8 @@ open http://localhost:8080/
 
   * [Vote Star Trek vs Star Wars](http://vote.tino-schroeter.de) (ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vote)
+  * [QR Code Generator](http:///qrcode.tino-schroeter.de) (ready) 
+[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/qrcode)
   * [Markdown Wiki](https://wiki.tino-schroeter.de) (not ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wiki)
   * [VM Management tool](https://vmtool.tino-schroeter.de) (not ready) 
