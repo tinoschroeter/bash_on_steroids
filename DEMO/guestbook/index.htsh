@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Tino Schroeter">
+    <title>Bashte guestbook</title>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <style>
+      body {
+      background: url("/static/bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      }
+      .box {
+       opacity: 0.8;
+       }
+     </style>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation" class="active"><a href="#">Home</a></li>
+            <li role="presentation"><a href="#">About</a></li>
+            <li role="presentation"><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+     <?bash
+     ## MySQL function
+     ############################################
+     function mysql_connect {
+       mysql -s -uroot
+       }
+     ?>
+
+      <div class="jumbotron box">
+        <h2>Bashte Guestbook!!</h2>
+        <form method="POST" action="">
+        <label for="name">drop a line..: </label>
+        <input id="name" name="name" type="text" size="50" autofocus/>
+        <button type="submit" class="btn btn-danger">Submit</button>
+        </form>
+      <?bash
+      ## create database and table if not exist
+      ############################################
+      if ! echo "show databases;"|mysql_connect|grep guestbook_dev >/dev/null;then
+        echo "create database guestbook_dev;"|mysql_connect
+        echo "use guestbook_dev
+            create table data(name VARCHAR(120));"|mysql_connect
+      echo "DB created.."
+      else
+        echo "connection okay..."
+      fi
+      ?>
+
+       <?bash
+       ## write stuff to mysql
+       #########################
+       echo "USE guestbook_dev
+             INSERT INTO data (name) VALUES ('${name}')"|mysql_connect
+       ?>
+      </div>
+
+      <div class="jumbotron box">
+       <h2>Previous Guests:</h2>
+       <ol>
+       <?bash
+       FS='\n'
+       ## read from mysql put it into the right place
+       ################################################
+       data=$(echo "USE guestbook_dev
+              select name from data;"|mysql_connect|tac)
+       for i in $data;do
+         echo "<li>$i</li>"|sed 's/+/ /g'
+       done
+      ?>
+       </ol>
+    </div>
+ </div> <!-- /container -->
+</body>
+</html>
