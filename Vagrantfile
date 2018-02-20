@@ -25,6 +25,7 @@ tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
 	Include conf-available/serve-cgi-bin.conf
 </VirtualHost>
 EOF
+sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
 a2enmod cgid
 service apache2 restart
 SCRIPT
