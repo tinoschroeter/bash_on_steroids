@@ -47,6 +47,9 @@ fi
          wars=$(cat /tmp/b) || wars=0
            echo "Star Wars $wars votes<br>"
            echo "<br> you've already voted!"
+         if [ "$voteing" = "yes" ];then
+           echo "<br> you've already voted!"
+         fi
          ?>
         </div>
        </div>
