@@ -1,8 +1,6 @@
 #!/bin/bash
-#config
-
+# config
 cgi_path="/usr/lib/cgi-bin/"
-#######
 
 bos() {
 tee $2 >>/dev/null <<EOF
@@ -87,11 +85,11 @@ while read -r line;do
 	fi
 done < "$1"
 }
-for i in $(ls |grep 'htsh$');do
-if [ $i -nt ${cgi_path}$(echo $i|sed 's/htsh/cgi/g') ];then
-echo "$i --->> ${cgi_path}$(echo $i|sed 's/htsh/cgi/g')"
-for run in  "bos" "chmod +x";do
-$run $i ${cgi_path}$(echo $i|sed 's/htsh/cgi/g')
+for file in $(ls |grep 'htsh$');do
+if [ $file -nt ${cgi_path}$(echo $file|sed 's/htsh/cgi/g') ];then
+echo "$file --->> ${cgi_path}$(echo $file|sed 's/htsh/cgi/g')"
+for command in  "bos" "chmod +x";do
+$command $file ${cgi_path}$(echo $file|sed 's/htsh/cgi/g')
 done
 fi
 done
