@@ -81,7 +81,7 @@ open http://localhost:8080/
   * [Vote Star Trek vs Star Wars](https://vote.tino-schroeter.de) (ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vote)
   * [QR Code Generator](https://qrcode.tino-schroeter.de) (ready) 
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/qrcode
+[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/qrcode)
   * [Environment Variables](https://env.tino-schroeter.de) (ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/env)
   * [Markdown Wiki](https://wiki.tino-schroeter.de) (not ready) 
@@ -96,8 +96,6 @@ open http://localhost:8080/
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/guestbook)
   * [todo](https://todo.tino-schroeter.de) (not ready)
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/todo)
-  * [show environment variables](https://env.tino-schroeter.de) (not ready)
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/env)
 
 
 ## Wiki
