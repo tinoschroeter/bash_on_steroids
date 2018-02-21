@@ -1,6 +1,7 @@
 <?bash
 IFS=$'\n'
 
+echo "Fork me on GitHub: https://github.com/tinoschroeter/bash_on_steroids" 
 for i in $(env);do
   echo "$i<br>"
 done
