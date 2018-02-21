@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <title>Star Trek vs Star Wars!</title>
     <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
-    <meta name="keywords" content="docker-compose, docker, stack">
-    <meta name="author" content="Tutum dev team">
+    <meta name="author" content="Tino Schroeter">
     <link rel='stylesheet' href="style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
  </head>
