@@ -86,7 +86,7 @@ open http://localhost:8080/
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/env)
   * [guestbook](https://guestbook.tino-schroeter.de) (ready)
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/guestbook)
-  * [Markdown Wiki](https://wiki.tino-schroeter.de) (not ready) 
+  * [Markdown Wiki](https://wiki.tino-schroeter.de) (ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wiki)
   * [VM Management tool](https://vmtool.tino-schroeter.de) (not ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vmtool)
