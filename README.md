@@ -92,7 +92,7 @@ open http://localhost:8080/
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/login)
   * [VM Management tool](https://vmtool.tino-schroeter.de) (not ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vmtool)
-  * [WLAN config tool](https://wlan.tino-schroeter.de) (not ready) 
+  * [WLAN config tool](https://wlan.tino-schroeter.de) (ready) 
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wlan)
   * [todo](https://todo.tino-schroeter.de) (not ready)
 [source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/todo)
