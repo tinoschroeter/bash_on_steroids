@@ -6,6 +6,7 @@
 - write fast **wabapps** in pure **#!bash** script
 - **QUERY_STRING** and **POST_STRING** variables can used as normal bash **variables**
 - (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
+- Bash for Web Applications
 
 ## Install Apache2
 ```shell
