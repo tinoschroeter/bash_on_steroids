@@ -43,7 +43,7 @@
   <label class="col-md-4 control-label" for="enter"></label>
   <div class="col-md-4">
     <button id="submit" name="" class="btn btn-success">Submitt</button>
-    <a id="rescan" class="btn btn-info" href="/wlan">Rescan</a>
+    <a id="rescan" class="btn btn-info" href="/">Rescan</a>
   </div>
 </div>
 
