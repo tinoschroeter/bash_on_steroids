@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Wiki</title>
+  <meta name="author" content="Tino Schroeter">
+  <link rel='stylesheet' href="style.css" />
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+</head>
+<body translate="no">
+
+<form class="form-horizontal">
+<fieldset>
+<legend></legend>
+
+ <!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="ssid">SSID</label>
+  <div class="col-md-6">
+   <select id="ssid" name="selectbasic" class="form-control">
+   <?bash
+      iwlist wlan0 scan|grep ESSID| cut -d "\"" -f 2|while read i;do
+        echo "<option value="$i">$i</option>"
+        done
+        echo "</select>"
+   ?>
+
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="password">Password</label>
+  <div class="col-md-6">
+  <input id="password" name="password" placeholder="Password" class="form-control input-md" required="" type="password">
+
+  </div>
+</div>
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="enter"></label>
+  <div class="col-md-4">
+    <button id="submit" name="" class="btn btn-success">Submitt</button>
+    <a id="rescan" class="btn btn-info" href="/wlan">Rescan</a>
+  </div>
+</div>
+
+<?bash
+   if [ ! -z ${selectbasic} ];then
+     sudo tee /etc/network/interfaces >/dev/null <<EOF
+        source-directory /etc/network/interfaces.d
+
+        auto lo 
+        iface lo inet loopback
+
+        iface eth0 inet dhcp
+
+        allow-hotplug wlan0
+        iface wlan0 inet dhcp
+        wpa-ap-scan 1
+        wpa-scan-ssid 1
+        wpa-ssid "$selectbasic"
+        wpa-psk "$password"
+     EOF
+     echo "sudo ifdown wlan0 && sleep 1 && ifup wlan0"| at now
+   fi
+?>
+
+</fieldset>
+</form>
+</body>
+</html>

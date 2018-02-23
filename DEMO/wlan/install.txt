@@ -1,0 +1,4 @@
+apt-get install -y iwlist
+
+sudo visudo
+and put this to your sudoers file: www-data ALL=(ALL) NOPASSWD: ALL
