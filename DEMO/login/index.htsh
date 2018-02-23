@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<?bash    
+tmp=$(mktemp)
+echo $HTTP_COOKIE > $tmp
+if ! grep "login=1234567" $tmp > /dev/null;then
+  echo "<meta http-equiv="refresh" content="1";url="/login">"
+  exit 0
+  else
+    rm $tmp
+fi
+?>
+</head>
+<body>
+<img src="https://media.giphy.com/media/xUOwGn5bp7Xi6rLUYw/giphy.gif">
+</body>
+</html>
+

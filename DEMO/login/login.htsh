@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="login">
+    <meta name="author" content="mail@wgnetworks.de">
+
+    <title>login</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="login.css" rel="stylesheet">
+<?bash
+if [ ! -z  $login ] && [ ! -z $password ];then
+if [ $login == "admin" ] && [ $password == "admin" ];then
+    echo "<meta http-equiv=\"Set-Cookie\" content=\"login=1234567;Max-Age=3600\">"
+    echo "<meta http-equiv="refresh" content="1";url="/" />"
+    fi
+fi
+?>
+</head>
+<body>
+<br><br><br>
+<script src="/static/js/login.js"></script>
+<body>
+    <div class="container">
+    <div class="row vertical-offset-100">
+    <div class="col-md-4 col-md-offset-4">
+    <div class="panel panel-default">
+    <div class="panel-heading">                                
+    <div class="row-fluid user-row">
+    </div>
+    </div>
+    <div class="panel-body">
+    <form accept-charset="UTF-8" role="form" class="form-signin" action="login" method="post">
+    <fieldset>
+    <label class="panel-login">
+    <div class="login_result"></div>
+    </label>
+    <input class="form-control" placeholder="Username" id="login"name="login"  type="text">
+    <input class="form-control" placeholder="Password" id="password" name="password" type="password">
+    <br></br>
+    <input class="btn btn-lg btn-success btn-block" type="submit" id="login" value="Login »">
+    </fieldset>
+    </form>
+ </div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</div>
+</html>
+
