@@ -31,14 +31,14 @@ while read -r line;do
 			
 			if [ -n "$pre" ];then
 				pre=${pre//\\/\\\\}
-				mod_pre=$(echo -e "$pre" | sed "s/'/\\\'/g" | sed 's/"/\\\"/g')
+				mod_pre=$(echo -e "$pre" |sed 's/"/\\\"/g')
 				mod_pre=${mod_pre//\$/\\$}
 				echo -e "echo  \"$mod_pre\"" >>"$2"
 			fi
 			echo -e "$comm" >> "$2"
 			if [ -n "$post" ];then
 				post=${post//\\/\\\\}
-				mod_post=$(echo -e "$post" | sed "s/'/\\\'/g" | sed 's/"/\\\"/g')
+				mod_post=$(echo -e "$post" | sed 's/"/\\\"/g')
 				mod_post=${mod_post//\$/\\$}
 				echo -e "echo  \"$mod_post\"" >>"$2"
 			fi
@@ -74,7 +74,7 @@ while read -r line;do
 	# Take action on current line based on flag
 	if [ $flag -eq 0 ];then
 		line=${line//\\/\\\\}
-		modline=$(echo  "$line" |sed "s/'/\\\'/g" | sed 's/"/\\\"/g')
+		modline=$(echo  "$line" | sed 's/"/\\\"/g')
 		modline=${modline//\$/\\$}
 		echo -e "echo  \"$modline\"" >>"$2"
 	else
@@ -82,11 +82,11 @@ while read -r line;do
 	fi
 done < "$1"
 }
-for file in $(ls |grep 'htsh$');do
-if [ $file -nt ${cgi_path}$(echo $file|sed 's/htsh/cgi/g') ];then
-echo "$file --->> ${cgi_path}$(echo $file|sed 's/htsh/cgi/g')"
+for file in $(ls|grep 'htsh$');do
+if [ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ];then
+echo "$file --->> ${cgi_path}${file//htsh/cgi}"
 for command in  "bos" "chmod +x";do
-$command $file ${cgi_path}$(echo $file|sed 's/htsh/cgi/g')
+$command "$file" ${cgi_path}"${file//htsh/cgi}"
 done
 fi
 done
