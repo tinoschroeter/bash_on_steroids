@@ -6,6 +6,7 @@
 - write fast **wabapps** in pure **#!bash** script
 - **QUERY_STRING** and **POST_STRING** variables can used as normal bash **variables**
 - (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
+- Funktion for decoding URL-encoding: var_dec=$(urldecode $var1)
 - Bash for Web Applications
 
 ## Install Apache2
@@ -19,7 +20,7 @@ tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
  
         ScriptAlias "/index.html" "/usr/lib/cgi-bin/index.cgi"
         ScriptAlias "/index" "/usr/lib/cgi-bin/index.cgi"
-        RedirectMatch 404 index.htsh
+        RedirectMatch 404 .*\.htsh
         <Directory /var/www/html/>
           AllowOverride none
           Options -Indexes
@@ -55,6 +56,15 @@ All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?
 </ul>
 </body>
 </html>
+```
+## Decode URL-encoding
+```
+transform this %23%21%2Fbin%2Fbash to that #!/bin/bash
+example:
+
+var_dec=$(urldecode $var)
+
+https://en.wikipedia.org/wiki/Percent-encoding
 ```
 ![list](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/lists.png)
 
