@@ -14,6 +14,13 @@ read -n \$CONTENT_LENGTH POST_STRING <&0
 eval \`echo "\${POST_STRING}"|tr '&' ';'\`
 fi
 eval \`echo "\${QUERY_STRING}"|tr '&' ';'\`
+
+## decode URL-encoding
+## transform this %23%21%2Fbin%2Fbash to that #!/bin/bash 
+## example: Evar=$(urldecode $var) 
+## https://en.wikipedia.org/wiki/Percent-encoding
+##
+urldecode() { : "\${*//+/ }"; echo -e "\${_//%/\\x}"; }
 EOF
 
 flag=0
