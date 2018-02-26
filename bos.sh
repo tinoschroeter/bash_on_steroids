@@ -17,6 +17,7 @@ eval \`echo "\${QUERY_STRING}"|tr '&' ';'\`
 
 ## decode URL-encoding
 ## transform this %23%21%2Fbin%2Fbash to that #!/bin/bash 
+## var="%23%21%2Fbin%2Fbash"
 ## example: Evar=$(urldecode "$var") 
 ## https://en.wikipedia.org/wiki/Percent-encoding
 ##
