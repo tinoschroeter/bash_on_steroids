@@ -11,7 +11,6 @@
     grep -q 'serve-cgi-bin.conf' /etc/apache2/sites-enabled/default.conf 
 }
 @test "test execute cgi script" {
-  skip "skip test"
   curl -s http://localhost/index | grep -q 'OK'
 }
 @test "test shellcheck build script" {
