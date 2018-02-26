@@ -1,19 +1,7 @@
 language: bash
-
-addons:
-    #apt:
-        sources:
-            - debian-sid
-            - sourceline: 'ppa:duggan/bats'
-        packages:
-            - shellcheck
-            - apache2
-            - curl
-            - bats
-            - bc
-
-os:
-    - linux
-
+before_install:
+  - sudo add-apt-repository ppa:duggan/bats --yes
+  - sudo apt-get update -qq
+  - sudo apt-get install -qq bats
 script:
-- bats ./testing.bats
+  - bats ./testing.bats
