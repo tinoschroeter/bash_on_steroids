@@ -1,6 +1,8 @@
 ## Use !#bash scripts for writing beautiful web apps  :sparkles:
 ![pageres](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/like_a_boss.png)
 
+[![Build Status](https://travis-ci.org/tinoschroeter/bash_on_steroids.svg?branch=master)](https://travis-ci.org/tinoschroeter/bash_on_steroids)
+
 ## Features
 - easy to use  ``` <?bash echo "hello world" ?>```
 - write fast **wabapps** in pure **#!bash** script
