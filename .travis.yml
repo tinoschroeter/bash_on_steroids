@@ -5,4 +5,4 @@ before_install:
   - sudo apt-get install -qq bats
   - sudo apt-get install -qq apache2
 script:
-  - bats ./testing.bats
+  - sudo bats ./testing.bats
