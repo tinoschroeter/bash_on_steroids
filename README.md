@@ -84,9 +84,6 @@ git clone https://github.com/tinoschroeter/bash_on_steroids.git
 cd bash_on_steroids
 
 vagrant up
-vagrant ssh
-cd /var/www/html/
-sudo ./bos.sh
 
 open http://localhost:8080/
 ```
