@@ -5,9 +5,9 @@
     ./bos.sh
 }
 @test "test execute cgi script" {
-  skip "feature coming"
   curl -s http://localhost/index | grep -q 'OK'
 }
 @test "test shellcheck build script" {
-    shellcheck bos.sh
+  skip "skip shellcheck" 
+  shellcheck bos.sh
 }
