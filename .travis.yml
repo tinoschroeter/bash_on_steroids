@@ -3,7 +3,7 @@ language: bash
 addons:
     #apt:
         sources:
-            #- debian-sid
+            - debian-sid
             - sourceline: 'ppa:duggan/bats'
         packages:
             - shellcheck
