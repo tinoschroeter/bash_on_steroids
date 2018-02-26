@@ -2,6 +2,8 @@
 ![pageres](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/like_a_boss.png)
 
 [![Build Status](https://travis-ci.org/tinoschroeter/bash_on_steroids.svg?branch=master)](https://travis-ci.org/tinoschroeter/bash_on_steroids)
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=plastic)]()
+
 
 ## Features
 - easy to use  ``` <?bash echo "hello world" ?>```
