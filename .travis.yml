@@ -3,31 +3,9 @@ before_install:
   - sudo add-apt-repository ppa:duggan/bats --yes
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
-  - sudo apt-get install -qq apache2
-  - sudo a2enmod cgid
   - sudo install shellcheck
   - sudo apt-get install -qq curl
-  - sudo tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
-<VirtualHost *:80>
-	ServerName example.org
-	ServerAdmin webmaster@example.org
-	DocumentRoot /var/www/html/
- 
-        ScriptAlias "/index.html" "/usr/lib/cgi-bin/index.cgi"
-        ScriptAlias "/index" "/usr/lib/cgi-bin/index.cgi"
-        RedirectMatch 404 .*\.htsh
-        <Directory /var/www/html/>
-          AllowOverride none
-          Options -Indexes
-          Require all granted
-        </Directory>
-	ErrorLog /var/log/apache2/error.log
-	CustomLog /var/log/apache2/access.log combined
-	Include conf-available/serve-cgi-bin.conf
-</VirtualHost>
-EOF
-  - sudo a2enmod cgid
-  - sudo service apache2 restart
+  - sudo bash install.sh
 
 script:
   - sudo bats ./testing.bats
