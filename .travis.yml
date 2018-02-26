@@ -6,7 +6,9 @@ addons:
             #- debian-sid
             - sourceline: 'ppa:duggan/bats'
         packages:
-            #- shellcheck
+            - shellcheck
+            - apache
+            - curl
             - bats
             - bc
 
@@ -15,4 +17,3 @@ os:
 
 script:
 - bats ./testing.bats
-#- shellcheck bos.sh
