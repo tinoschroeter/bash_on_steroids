@@ -14,5 +14,5 @@ os:
     - linux
 
 script:
-- bats ./teting.bats
+- bats ./testing.bats
 #- shellcheck bos.sh
