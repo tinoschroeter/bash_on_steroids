@@ -4,6 +4,8 @@ before_install:
   - sudo apt-get update -qq
   - sudo apt-get install -qq bats
   - sudo apt-get install -qq apache2
+  - sudo a2enmod cgid
+  - sudo service apache2 restart
   - sudo apt-get install -qq curl
 script:
   - sudo bats ./testing.bats
