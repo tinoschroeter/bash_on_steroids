@@ -17,7 +17,7 @@ eval \`echo "\${QUERY_STRING}"|tr '&' ';'\`
 
 ## decode URL-encoding
 ## transform this %23%21%2Fbin%2Fbash to that #!/bin/bash 
-## example: Evar=$(urldecode $var) 
+## example: Evar=$(urldecode "$var") 
 ## https://en.wikipedia.org/wiki/Percent-encoding
 ##
 urldecode() { : "\${*//+/ }"; echo -e "\${_//%/\\x}"; }
@@ -81,7 +81,7 @@ while read -r line;do
 	# Take action on current line based on flag
 	if [ $flag -eq 0 ];then
 		line=${line//\\/\\\\}
-		modline=$(echo  "$line" | sed 's/"/\\\"/g')
+        modline=$(live//"/\\\")
 		modline=${modline//\$/\\$}
 		echo -e "echo  \"$modline\"" >>"$2"
 	else
@@ -89,7 +89,7 @@ while read -r line;do
 	fi
 done < "$1"
 }
-for file in $(ls|grep 'htsh$');do
+for file in $(echo *|grep 'htsh$');do
 if [ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ];then
 echo "$file --->> ${cgi_path}${file//htsh/cgi}"
 for command in  "bos" "chmod +x";do
