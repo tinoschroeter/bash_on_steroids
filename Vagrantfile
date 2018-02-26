@@ -1,7 +1,8 @@
 Vagrant::DEFAULT_SERVER_URL.replace('https://vagrantcloud.com')
 
 $script = <<SCRIPT
-apt-get update; apt-get install -y apache2
+add-apt-repository ppa:duggan/bats --yes
+apt-get update; apt-get install -y apache2 bats shellcheck curl
 rm /var/www/html/index.html
 tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
 <VirtualHost *:80>
@@ -28,6 +29,8 @@ EOF
 sed -i 's/www-data/vagrant/g' /etc/apache2/envvars
 a2enmod cgid
 service apache2 restart
+
+cd /var/www/html && bats ./testing.bats
 SCRIPT
 
 Vagrant.configure("2") do |config|
