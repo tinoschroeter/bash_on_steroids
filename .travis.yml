@@ -7,7 +7,7 @@ addons:
             - sourceline: 'ppa:duggan/bats'
         packages:
             - shellcheck
-            - apache
+            - apache2
             - curl
             - bats
             - bc
