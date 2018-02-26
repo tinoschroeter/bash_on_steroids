@@ -4,11 +4,15 @@ addons:
     apt:
         sources:
             - debian-sid
+            - sourceline: 'ppa:duggan/bats'
         packages:
             - shellcheck
+            - bats
+            - bc
 
 os:
     - linux
 
 script:
-- shellcheck bos.sh
+- bats ./teting.bats
+#- shellcheck bos.sh
