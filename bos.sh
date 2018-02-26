@@ -78,22 +78,22 @@ while read -r line;do
 		fi
 		continue;
 	fi
-	# Take action on current line based on flag
-	if [ $flag -eq 0 ];then
-		line=${line//\\/\\\}
-        modline=$(live//"/\\\")
-		modline=${modline//\$/\\$}
-		echo -e "echo  \"$modline\"" >>"$2"
-	else
-		echo -e "${line}" >> "$2"
-	fi
+   # Take action on current line based on flag
+    if [ $flag -eq 0 ];then
+        line=${line//\\/\\\\}
+        modline=$(echo  "$line" | sed 's/"/\\\"/g')
+        modline=${modline//\$/\\$}
+        echo -e "echo  \"$modline\"" >>"$2"
+    else
+        echo -e "${line}" >> "$2"
+    fi
 done < "$1"
 }
 for file in $(ls|grep 'htsh$');do
 if [ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ];then
 echo "$file --->> ${cgi_path}${file//htsh/cgi}"
 for command in  "bos" "chmod +x";do
-$command "$file ${cgi_path}${file//htsh/cgi}"
+$command "$file" ${cgi_path}"${file//htsh/cgi}"
 done
 fi
-done
+done         
