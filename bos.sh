@@ -93,7 +93,7 @@ for file in $(ls|grep 'htsh$');do
 if [ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ];then
 echo "$file --->> ${cgi_path}${file//htsh/cgi}"
 for command in  "bos" "chmod +x";do
-$command "$file" ${cgi_path}"${file//htsh/cgi}"
+$command "$file ${cgi_path}${file//htsh/cgi}"
 done
 fi
 done
