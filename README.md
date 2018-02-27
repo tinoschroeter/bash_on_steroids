@@ -62,6 +62,8 @@ All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?
 </body>
 </html>
 ```
+![list](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/lists.png)
+
 ## Decode URL-encoding
 ```
 transform this %23%21%2Fbin%2Fbash to that #!/bin/bash
@@ -71,7 +73,6 @@ var_dec=$(urldecode $var)
 
 https://en.wikipedia.org/wiki/Percent-encoding
 ```
-![list](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/lists.png)
 
 ## build
 ```shell
