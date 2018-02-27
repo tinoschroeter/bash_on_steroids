@@ -24,6 +24,13 @@
        true
     fi
 }
+@test "test shellcheck build script - not fail" {
+    if shellcheck bos.sh; then
+       true
+    else
+       true
+    fi
+}
 @test "test shellcheck build script" {
   skip "skip shellcheck" 
   shellcheck bos.sh
