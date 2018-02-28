@@ -77,7 +77,7 @@ while read -r line;do
    # Take action on current line based on flag
     if [ $flag -eq 0 ];then
         line=${line//\\/\\\\}
-        modline=$(echo  "$line" | sed 's/"/\\\"/g')
+        modline=$(echo  -e "$line" | sed -e 's/"/\\\"/g')
         modline=${modline//\$/\\$}
         echo -e "echo  \"$modline\"" >>"$2"
     else
@@ -85,7 +85,7 @@ while read -r line;do
     fi
 done < "$1"
 }
-for file in $(ls|grep 'htsh$');do
+for file in *.htsh;do
 if [ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ];then
 echo "$file --->> ${cgi_path}${file//htsh/cgi}"
 for command in  "bos" "chmod +x";do
