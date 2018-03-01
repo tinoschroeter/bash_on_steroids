@@ -10,7 +10,7 @@
 - [x] easy to use  ``` <?bash echo "hello world" ?>```
 - [x] write fast **wabapps** in pure **#!bash** script
 - [x] **QUERY_STRING** and **POST_STRING** variables can used as normal bash **variables**
-- [x] (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
+  (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
 - [x] Funktion for decoding URL-encoding: var_dec=$(urldecode $var1)
 - [x] Bash for Web Applications
 
