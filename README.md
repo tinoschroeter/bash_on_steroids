@@ -4,15 +4,16 @@
 [![Build Status](https://travis-ci.org/tinoschroeter/bash_on_steroids.svg?branch=master)](https://travis-ci.org/tinoschroeter/bash_on_steroids)
 ![BoS](https://img.shields.io/badge/%23!Bash%20-%20on%20steroids-blue.svg)
 ![platform](https://img.shields.io/badge/platform-OSX%2C%20Linux%20%26%20Windows-blue.svg) 
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/bashops/bash_on_steroids)
 ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 
 ## Features
-- [x] easy to use  ``` <?bash echo "hello world" ?>```
-- [x] write fast **wabapps** in pure **#!bash** script
-- [x] **QUERY_STRING** and **POST_STRING** variables can used as normal bash **variables**
+- easy to use  ``` <?bash echo "hello world" ?>```
+- write fast **wabapps** in pure **#!bash** script
+- **QUERY_STRING** and **POST_STRING** variables can used as normal bash **variables**
   (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
-- [x] Funktion for decoding URL-encoding: var_dec=$(urldecode $var1)
-- [x] Bash for Web Applications
+- Funktion for decoding URL-encoding: var_dec=$(urldecode $var1)
+- Bash for Web Applications
 
 ## Install Apache2
 ```shell
