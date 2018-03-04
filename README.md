@@ -2,8 +2,8 @@
 ![pageres](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/like_a_boss.png)
 
 [![Build Status](https://travis-ci.org/tinoschroeter/bash_on_steroids.svg?branch=master)](https://travis-ci.org/tinoschroeter/bash_on_steroids)
+[![Code Climate](https://codeclimate.com/github/tinoschroeter/bash_on_steroids/badges/gpa.svg)](https://codeclimate.com/github/tinoschroeter/bash_on_steroids)
 ![BoS](https://img.shields.io/badge/%23!Bash%20-%20on%20steroids-blue.svg)
-![platform](https://img.shields.io/badge/platform-OSX%2C%20Linux%20%26%20Windows-blue.svg) 
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/bashops/bash_on_steroids)
 ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 
