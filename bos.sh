@@ -11,9 +11,9 @@ echo ""
 ## as bash variables available
 if [ ! -z \$CONTENT_LENGTH ] && [ "\$CONTENT_LENGTH" -gt 0 ]; then
 read -n \$CONTENT_LENGTH POST_STRING <&0
-eval \`echo "\${POST_STRING}"|tr '&' ';'\`
+eval \`echo "\${POST_STRING\\;}"|tr '&' ';'\`
 fi
-eval \`echo "\${QUERY_STRING}"|tr '&' ';'\`
+eval \`echo "\${QUERY_STRING\\;}"|tr '&' ';'\`
 
 ## decode URL-encoding
 urldecode() { : "\${*//+/ }"; echo -e "\${_//%/\\x}"; }
