@@ -3,7 +3,7 @@
 cgi_path="/usr/lib/cgi-bin/"
 
 bos() {
-tee $2 >>/dev/null <<EOF
+tee "$2" >>/dev/null <<EOF
 #!/bin/bash 
 echo Content-type: text/html
 echo ""
@@ -52,7 +52,7 @@ while read -r line;do
 		fi	
 	fi
 	# Start tag
-	if echo "$line" | sed 's/^ *//'| grep -q "^<?bash\|^<?";then
+	if echo "$line" | sed 's/^ *//'| grep -q "^<?bash\\|^<?";then
 		if [ $flag -eq 0 ];then
 			flag=1
 			line=${line/<?bash}
