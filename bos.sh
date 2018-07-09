@@ -86,10 +86,9 @@ while read -r line;do
 done < "$1"
 }
 for file in *.htsh;do
-if [ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ];then
-echo "$file --->> ${cgi_path}${file//htsh/cgi}"
-for command in  "bos" "chmod +x";do
-$command "$file" ${cgi_path}"${file//htsh/cgi}"
-done
-fi
+  if [ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ];then
+    echo "$file --->> ${cgi_path}${file//htsh/cgi}"
+    bos "$file" ${cgi_path}"${file//htsh/cgi}"
+    chmod +x ${cgi_path}"${file//htsh/cgi}"
+  fi
 done
