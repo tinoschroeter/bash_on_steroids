@@ -4,17 +4,16 @@
     <meta charset="utf-8">
     <title>Star Trek vs Star Wars!</title>
     <meta name = "viewport" content = "width=device-width, initial-scale = 1.0">
-    <meta name="keywords" content="docker-compose, docker, stack">
-    <meta name="author" content="Tutum dev team">
+    <meta name="author" content="Tino Schroeter">
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
  </head>
 <?bash 
-if [ "$vote" = "a" ];then
+if [[ "$vote" = "a" ]];then
   c=$(cat /tmp/a)
   a=$(( $c +1 ))
   echo $a > /tmp/a
-elif [ "$vote" = "b" ];then 
+elif [[ "$vote" = "b" ]];then 
   c=$(cat /tmp/b)
   b=$(( $c +1 ))
   echo $b > /tmp/b
@@ -42,4 +41,3 @@ fi
     </div>
   </body>
 </html>
-
