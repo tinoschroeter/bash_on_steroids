@@ -9,7 +9,7 @@ echo Content-type: text/html
 echo ""
 ## make POST and GET stings 
 ## as bash variables available
-if [ ! -z \$CONTENT_LENGTH ] && [ "\$CONTENT_LENGTH" -gt 0 ]; then
+if [ ! -z \$CONTENT_LENGTH ] && [ "\$CONTENT_LENGTH" -gt 0 ] && [ \$CONTENT_TYPE != "multipart/form-data" ]; then
 read -n \$CONTENT_LENGTH POST_STRING <&0
 eval \`echo "\${POST_STRING//;}"|tr '&' ';'\`
 fi
