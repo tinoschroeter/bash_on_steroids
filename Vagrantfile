@@ -1,4 +1,5 @@
-Vagrant::DEFAULT_SERVER_URL.replace('https://vagrantcloud.com')
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
 
 $script = <<SCRIPT
 add-apt-repository ppa:duggan/bats --yes
