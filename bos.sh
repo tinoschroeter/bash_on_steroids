@@ -87,7 +87,7 @@ done < "$1"
 }
 for file in *.htsh;do
   if [ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ];then
-    echo "$file --->> ${cgi_path}${file//htsh/cgi}"
+    echo -e "\033[0;32m$file \033[0;31m--->>\033[0;32m ${cgi_path}${file//htsh/cgi}\033[0m"
     bos "$file" ${cgi_path}"${file//htsh/cgi}"
     chmod +x ${cgi_path}"${file//htsh/cgi}"
   fi
