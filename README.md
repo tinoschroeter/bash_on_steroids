@@ -116,4 +116,4 @@ open http://localhost:8080/
 ## Wiki
 
 [Wiki -->](https://github.com/tinoschroeter/bash_on_steroids/wiki)
-![wiki](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wiki.jpg "wiki")
+![wiki](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wiki.png "wiki")
