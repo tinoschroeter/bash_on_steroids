@@ -63,7 +63,7 @@ All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?
 </body>
 </html>
 ```
-![list](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/lists.png)
+![list](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/lists.png)
 
 ## Decode URL-encoding
 ```
@@ -89,7 +89,7 @@ vagrant up
 
 open http://localhost:8080/
 ```
-![STvsSW](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/stvssw.jpg)
+![STvsSW](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/stvssw.jpg "STvsSW")
 
 ## DEMO
 
