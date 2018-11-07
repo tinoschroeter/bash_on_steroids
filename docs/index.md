@@ -1,4 +1,4 @@
-## Use !#bash scripts for writing beautiful web apps  :sparkles:
+## Use !#bash scripts for writing beautiful web apps
 ![pageres](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/like_a_boss.png)
 
 ![BoS](https://img.shields.io/badge/%23!Bash%20-%20on%20steroids-blue.svg)
@@ -6,13 +6,6 @@
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/bashops/bash_on_steroids)
 [![Code Climate](https://codeclimate.com/github/tinoschroeter/bash_on_steroids/badges/gpa.svg)](https://codeclimate.com/github/tinoschroeter/bash_on_steroids)
 ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
-
-<p align="left">
-  <a href="#Features">Features</a> •
-  <a href="#Install-Apache2">Install Apache2</a> •
-  <a href="#install-BoS">install BoS</a> •
-  <a href="#Usage">Usage</a> •
-</p>
 
 ## Features
 - easy to use  ``` <?bash echo "hello world" ?>```
