@@ -19,6 +19,7 @@ eval \`echo "\${QUERY_STRING//;}"|tr '&' ';'\`
 urldecode() { : "\${*//+/ }"; echo -e "\${_//%/\\x}"; }
 EOF
 
+IFS=''
 flag=0
 lc=0
 export txt=''
