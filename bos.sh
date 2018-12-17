@@ -1,5 +1,6 @@
 #!/bin/bash
 # config
+set -euo pipefail
 cgi_path="/usr/lib/cgi-bin/"
 
 bos() {
@@ -68,7 +69,7 @@ while read -r line;do
 	if echo "$line"|grep -q "?>$";then
 		if [ $flag -eq 1 ];then
 			flag=0
-			echo -e"${line/?>}" >> "$2"
+			echo "${line/?>}" >> "$2"
 		else
 			echo "ERROR : Unmatched ?&gt; in file $1 (Line $lc) "
 			exit 1
