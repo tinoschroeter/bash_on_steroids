@@ -49,8 +49,9 @@ service apache2 restart
 ```
 ## install BoS
 ```shell
-git clone https://github.com/tinoschroeter/bash_on_steroids.git /var/www/newProject
-cd /var/www/newProject
+project="newProject"
+git clone https://github.com/tinoschroeter/bash_on_steroids.git /var/www/${project}
+cd /var/www/${project}
 ./bos
 ```
 
