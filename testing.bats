@@ -15,7 +15,7 @@
 }
 @test "test: voting system" {
   curl -d "vote=b" -X POST http://localhost/index
-  curl -s http://localhost/index | grep -vq 'Star Trek 1 vote'
+  curl -s http://localhost/index | grep -q 'Star Wars [1-9] votes'
 }
 @test "test: check error log" {
     if grep -q '/usr/lib/cgi-bin\|cgid:error' /var/log/apache2/error.log; then
