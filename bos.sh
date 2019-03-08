@@ -6,6 +6,7 @@ cgi_path="/usr/lib/cgi-bin/"
 bos() {
 tee "$2" >>/dev/null <<EOF
 #!/bin/bash 
+echo "X-Bash-On-Steroids: Because there's nothing you can't fix with a #!Bash Script."
 echo Content-type: text/html
 echo ""
 ## make POST and GET stings 

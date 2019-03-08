@@ -22,6 +22,9 @@
 - Funktion for decoding URL-encoding: var_dec=$(urldecode $var1)
 - Bash for Web Applications
 
+## Why?
+- Because there's nothing you can't fix with a #!Bash Script.
+
 ## Install Apache2
 ```shell
 apt-get update; apt-get install -y apache2
