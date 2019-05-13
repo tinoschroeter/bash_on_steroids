@@ -2,7 +2,7 @@
     dpkg -l bash
 }
 @test "test: build cgi script" {
-    ./bos.sh
+    ./build.sh
 }
 @test "test: apache2 is installed and running" {
     netstat -tuplen|grep apache2|grep 80
