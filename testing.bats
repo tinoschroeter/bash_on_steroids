@@ -25,5 +25,5 @@
     fi
 }
 @test "test: shellcheck build script" {
-  shellcheck bos.sh
+  shellcheck build.sh
 }
