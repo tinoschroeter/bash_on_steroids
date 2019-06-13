@@ -13,9 +13,9 @@ echo ""
 ## as bash variables available
 if [ ! -z \$CONTENT_LENGTH ] && [ "\$CONTENT_LENGTH" -gt 0 ] && [ \$CONTENT_TYPE != "multipart/form-data" ]; then
 read -n \$CONTENT_LENGTH POST_STRING <&0
-eval \`echo "\${POST_STRING//;}"|tr '&' ';'|grep '[a-z]*=[a-z]*$'\`
+eval \$(echo "\${POST_STRING//;}"|grep '='|tr '&' ';')
 fi
-eval \`echo "\${QUERY_STRING//;}"|tr '&' ';'|grep '[a-z]*=[a-z]*$'\`
+eval \$(echo "\${QUERY_STRING//;}"|grep '='|tr '&' ';')
 ## decode URL-encoding
 urldecode() { : "\${*//+/ }"; echo -e "\${_//%/\\x}"; }
 EOF
