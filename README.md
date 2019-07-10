@@ -55,7 +55,7 @@ service apache2 restart
 project="newProject"
 git clone https://github.com/tinoschroeter/bash_on_steroids.git /var/www/${project}
 cd /var/www/${project}
-./bos
+./build.sh
 ```
 
 ## Usage
@@ -74,6 +74,37 @@ All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?
 </body>
 </html>
 ```
+
+**The Template Enginge will create this cgi script out of it**
+
+```
+#!/bin/bash 
+echo "X-Bash-On-Steroids: Because there's nothing you can't fix with a #!Bash Script."
+echo Content-type: text/html
+echo ""
+## make POST and GET stings 
+## as bash variables available
+if [ ! -z $CONTENT_LENGTH ] && [ "$CONTENT_LENGTH" -gt 0 ] && [ $CONTENT_TYPE != "multipart/form-data" ]; then
+read -n $CONTENT_LENGTH POST_STRING <&0
+eval $(echo "${POST_STRING//;}"|grep '='|tr '&' ';')
+fi
+eval $(echo "${QUERY_STRING//;}"|grep '='|tr '&' ';')
+## decode URL-encoding
+urldecode() { : "${*//+/ }"; echo -e "${_//%/\x}"; }
+echo  "<!DOCTYPE html>"
+echo  "<html>"
+echo  " <body>"
+echo  " <ul>"
+    
+      for i in Buzz Rex Bo Hamm Slink Potato; do
+        echo "<li>$i</li>"
+      done
+      
+echo  "</ul>"
+echo  "</body>"
+echo  "</html>"
+```
+
 ![list](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/lists.png)
 
 ## Decode URL-encoding
@@ -88,7 +119,7 @@ https://en.wikipedia.org/wiki/Percent-encoding
 
 ## build
 ```shell
-$ ./bos.sh 
+$ ./build.sh 
 $ index.htsh --->> /usr/lib/cgi-bin/index.cgi
 ```
 ## Vagrant
