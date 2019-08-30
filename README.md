@@ -129,7 +129,7 @@ cd bash_on_steroids
 
 vagrant up
 
-open http://localhost:8080/
+open http://localhost:8090/
 ```
 ![STvsSW](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/stvssw.jpg)
 

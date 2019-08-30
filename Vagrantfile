@@ -39,7 +39,7 @@ config.vm.define "bos" do |bos|
   bos.vm.hostname = "bos"
   bos.vm.box = "ubuntu/bionic64"
   bos.vm.provision "shell", inline: $script
-  bos.vm.network "forwarded_port", guest: 80, host: 8080
+  bos.vm.network "forwarded_port", guest: 80, host: 8090
   bos.vm.synced_folder ".", "/var/www/html"
   end
 config.vm.provider "virtualbox" do |v|
