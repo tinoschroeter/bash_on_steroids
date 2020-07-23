@@ -135,25 +135,13 @@ open http://localhost:8090/
 
 ## DEMO
 
-  * [Vote Star Trek vs Star Wars](https://vote.bashops.sh) (ready) 
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vote)
-  * [QR Code Generator](https://qrcode.bashops.sh) (ready) 
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/qrcode)
-  * [Environment Variables](https://env.bashops.sh) (ready) 
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/env)
-  * [guestbook](https://guestbook.bashops.sh) (ready)
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/guestbook)
-  * [Markdown Wiki](https://wiki.bashops.sh) (ready) 
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wiki)
-  * [login](https://login.bashops.sh) (ready)
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/login)
-  * [VM Management tool](https://vmtool.bashops.sh) (not ready) 
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vmtool)
-  * [WLAN config tool](https://wlan.bashops.sh) (ready) 
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wlan)
-  * [todo](https://todo.bashops.sh) (not ready)
-[source](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/todo)
-
+  * [Vote Star Trek vs Star Wars](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vote)
+  * [QR Code Generator](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/qrcode)
+  * [Environment Variables](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/env)
+  * [guestbook](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/guestbook)
+  * [Markdown Wiki](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wiki)
+  * [login](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/login)
+  * [WLAN config tool](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wlan)
 
 ## Wiki
 
