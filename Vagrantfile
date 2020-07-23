@@ -32,6 +32,8 @@ a2enmod cgid
 service apache2 restart
 
 cd /var/www/html && bats ./testing.bats
+echo
+echo "Got to http://localhost:8090"
 SCRIPT
 
 Vagrant.configure("2") do |config|
