@@ -147,3 +147,7 @@ open http://localhost:8090/
 
 [Wiki -->](https://github.com/tinoschroeter/bash_on_steroids/wiki)
 ![wiki](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/wiki.png "wiki")
+
+## License
+
+[MIT](http://choosealicense.com/licenses/mit/)
