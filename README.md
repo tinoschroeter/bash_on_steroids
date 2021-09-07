@@ -59,7 +59,7 @@ wget https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/ind
 chmod +x build.sh
 ./build.sh
 
-# index.cgi can be find in  /usr/lib/cgi-bin
+# index.cgi can be found in  /usr/lib/cgi-bin
 ```
 
 ## Usage
