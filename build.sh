@@ -1,6 +1,8 @@
 #!/bin/bash
-# config
 set -euo pipefail
+
+# config
+# default cgi path 
 cgi_path="/usr/lib/cgi-bin/"
 
 bos() {
@@ -18,7 +20,6 @@ fi
 eval \$(echo "\${QUERY_STRING//;}"|grep '='|tr '&' ';')
 ## decode URL-encoding
 urldecode() { : "\${*//+/ }"; echo -e "\${_//%/\\x}"; }
-
 EOF
 
 IFS=''
@@ -28,7 +29,7 @@ export txt=''
 while read -r line;do
     lc=$(( lc+1 ))
     # Start and end tags in same line
-    if echo "$line"| grep -qe "<?.*?>"  -qe "<?bash.*?>";then
+    if echo "$line"| grep -qe "<?.*?>" -qe "<?bash.*?>";then
         if [[ $flag -eq 0 ]];then
             line=${line//<?bash/<?}
             pre=$(echo -e "$line"  | sed -e 's/<?.*//')
@@ -88,7 +89,7 @@ while read -r line;do
     fi
 done < "$1"
 }
-for file in *.htsh;do
+for file in *.htsh; do
     if [[ "$file" -nt ${cgi_path}"${file//htsh/cgi}" ]];then
         echo -e "\\033[0;32m$file \\033[0;31m--->>\\033[0;32m ${cgi_path}${file//htsh/cgi}\\033[0m"
         bos "$file" ${cgi_path}"${file//htsh/cgi}"
