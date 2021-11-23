@@ -1,6 +1,8 @@
 ## Use !#bash scripts for writing beautiful web apps  :sparkles:
 ![pageres](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/like_a_boss.png)
 
+• [DEMO bos.tino.sh](https://bos.tino.sh)
+
 ![BoS](https://img.shields.io/badge/%23!Bash%20-%20on%20steroids-blue.svg)
 ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Build Status](https://travis-ci.com/tinoschroeter/bash_on_steroids.svg?branch=master)](https://travis-ci.com/tinoschroeter/bash_on_steroids)
@@ -17,7 +19,7 @@
 </p>
 
 
-[DEMO bos.tino.sh -->](https://bos.tino.sh)
+
 
 ## Features
 - easy to use  ``` <?bash echo "hello world" ?>```
