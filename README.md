@@ -7,6 +7,7 @@
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/bashops/bash_on_steroids)
 [![GitHub issues](https://img.shields.io/github/issues/tinoschroeter/bash_on_steroids.svg?style=popout)](https://github.com/tinoschroeter/bash_on_steroids/projects/1)
 ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
+[![k3s](https://img.shields.io/badge/run%20on%20-Raspberry%20Pi-red)](https://gist.github.com/tinoschroeter/fd4c254e93b2fd0c0b584bdcf756e95f)
 
 <p align="left"> •
   <a href="#Features">Features</a> •
@@ -14,6 +15,9 @@
   <a href="#install-BoS">install BoS</a> •
   <a href="#Usage">Usage</a> 
 </p>
+
+
+[DEMO bos.tino.sh -->](https://bos.tino.sh)
 
 ## Features
 - easy to use  ``` <?bash echo "hello world" ?>```

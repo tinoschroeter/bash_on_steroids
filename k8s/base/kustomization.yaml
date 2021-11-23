@@ -1,0 +1,4 @@
+namespace: bos
+resources:
+  - services.yaml
+  - bos.yaml

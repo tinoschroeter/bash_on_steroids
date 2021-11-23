@@ -1,0 +1,10 @@
+apiVersion: skaffold/v1
+kind: Config
+build:
+  artifacts:
+  - image: registry.tino.sh/bos
+    context: ../../
+    docker:
+      target: bash_on_steroids
+deploy:
+  kustomize: {}

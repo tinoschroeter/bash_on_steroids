@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations: 
+  labels:
+    app: bos-app
+  name: bos-app
+  namespace: bos
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: bos-app
+  template:
+    metadata:
+      labels:
+        app: bos-app
+    spec:
+      containers:
+      - name: bos-app
+        image: registry.tino.sh/bos
+        resources:
+          requests:
+            memory: "100Mi"
+            cpu: "200m"
+          limits:
+            memory: "440Mi"
+            cpu: "500m"

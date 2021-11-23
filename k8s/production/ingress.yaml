@@ -1,0 +1,25 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    cert-manager.io/cluster-issuer: letsencrypt-prod
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+  name: bos-ingress
+  namespace: bos
+spec:
+  rules:
+  - host: bos.tino.sh
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: bos-service
+            port: 
+              number: 7777
+  tls:
+  - hosts:
+    - bos.tino.sh
+    secretName: bos-tino-sh-tls
