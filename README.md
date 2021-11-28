@@ -5,7 +5,7 @@
 
 ![BoS](https://img.shields.io/badge/%23!Bash%20-%20on%20steroids-blue.svg)
 ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
-[![Build Status](https://travis-ci.com/tinoschroeter/bash_on_steroids.svg?branch=master)](https://travis-ci.com/tinoschroeter/bash_on_steroids)
+[![Build Status](https://jenkins.tino.sh/job/bash_on_steroids/job/master/badge/icon)](https://jenkins.tino.sh/job/bash_on_steroids/job/master/)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/bashops/bash_on_steroids)
 [![GitHub issues](https://img.shields.io/github/issues/tinoschroeter/bash_on_steroids.svg?style=popout)](https://github.com/tinoschroeter/bash_on_steroids/projects/1)
 ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
