@@ -53,7 +53,9 @@ EOF
 a2enmod cgid
 service apache2 restart
 ```
+
 ## install BoS
+
 ```shell
 cd /var/www/html # your html folder
 wget https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/build.sh
@@ -61,7 +63,7 @@ wget https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/ind
 chmod +x build.sh
 ./build.sh
 
-# index.cgi can be found in  /usr/lib/cgi-bin
+$ index.cgi can be found in  /usr/lib/cgi-bin
 ```
 
 ## Usage
