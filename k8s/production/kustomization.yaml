@@ -1,4 +1,5 @@
 ---
 bases:
   - ../base
+  - pvc.yaml
   - ingress.yaml

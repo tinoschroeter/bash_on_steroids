@@ -22,10 +22,6 @@ spec:
         volumeMounts:
         - name: bos-file
           mountPath: /tmp
-      volumes:
-      - name: bos-app
-        persistentVolumeClaim:
-          claimName: pvc-bos-file
         resources:
           requests:
             memory: "100Mi"
@@ -33,3 +29,7 @@ spec:
           limits:
             memory: "440Mi"
             cpu: "500m"
+      volumes:
+      - name: bos-file
+        persistentVolumeClaim:
+          claimName: pvc-bos-file

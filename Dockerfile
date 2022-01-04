@@ -1,7 +1,8 @@
-FROM ubuntu:jammy AS bash_on_steroids
+FROM ubuntu:20.04 AS bash_on_steroids
 
-RUN apt-get update && apt-get dist-upgrade -y 
-RUN apt-get install -y wget
+ENV DEBIAN_FRONTEND=noninteractive TZ=Europe/Berlin
+RUN apt-get update && \ 
+    apt-get install -y wget curl
 
 WORKDIR /bash_on_steroids
 COPY install.sh .

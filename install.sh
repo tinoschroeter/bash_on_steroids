@@ -1,5 +1,6 @@
 #!/bin/bash
 apt-get install -y apache2
+
 ServerName="example.org"
 tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
 <VirtualHost *:80>
