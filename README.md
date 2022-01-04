@@ -11,6 +11,7 @@
 ![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 [![k3s](https://img.shields.io/badge/run%20on%20-Raspberry%20Pi-red)](https://github.com/tinoschroeter/k8s.homelab)
 [![GitHub Super-Linter](https://github.com/tinoschroeter/bash_on_steroids/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/tinoschroeter/bash_on_steroids/actions/workflows/linter.yml)
+![last-commit](https://img.shields.io/github/last-commit/tinoschroeter/bash_on_steroids.svg?style=flat)
 
 * [Features](#Features)
 * [Install Apache2](#Install-Apache2)
