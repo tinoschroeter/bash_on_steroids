@@ -12,15 +12,10 @@
 [![k3s](https://img.shields.io/badge/run%20on%20-Raspberry%20Pi-red)](https://github.com/tinoschroeter/k8s.homelab)
 [![GitHub Super-Linter](https://github.com/tinoschroeter/bash_on_steroids/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/tinoschroeter/bash_on_steroids/actions/workflows/linter.yml)
 
-<p align="left"> •
-  <a href="#Features">Features</a> •
-  <a href="#Install-Apache2">Install Apache2</a> •
-  <a href="#install-BoS">install BoS</a> •
-  <a href="#Usage">Usage</a> 
-</p>
-
-
-
+* [Features](#Features)
+* [Install Apache2](#Install-Apache2)
+* [install BoS](#install-BoS)
+* [Usage](#Usage)
 
 ## Features
 - easy to use  ``` <?bash echo "hello world" ?>```
@@ -58,7 +53,9 @@ EOF
 a2enmod cgid
 service apache2 restart
 ```
+
 ## install BoS
+
 ```shell
 cd /var/www/html # your html folder
 wget https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/build.sh
@@ -66,7 +63,7 @@ wget https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/ind
 chmod +x build.sh
 ./build.sh
 
-# index.cgi can be found in  /usr/lib/cgi-bin
+$ index.cgi can be found in  /usr/lib/cgi-bin
 ```
 
 ## Usage
