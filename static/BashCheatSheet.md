@@ -119,9 +119,9 @@ echo ${arr["my key"]}
 echo ${arr[$my_key]}
 
 # Accessing the array
-${arr[@]}         # Returns all indizes and their items (doesn't work with associative arrays)
+${arr[@]}         # Returns all indices and their items (doesn't work with associative arrays)
 ${arr[*]}         # Returns all items
-${!arr[*]}        # Returns all indizes
+${!arr[*]}        # Returns all indices
 ${#arr[*]}        # Number elements
 ${#arr[$n]}       # Length of $nth item
 
