@@ -7,6 +7,7 @@
     <meta name="author" content="Tino Schroeter">
     <link rel="stylesheet" href="static/css/style.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="static/favicon.ico">
  </head>
    <?bash 
    if [[ "$vote" = "a" ]];then
@@ -23,6 +24,7 @@
     <div id="content-container">
       <div id="content-container-center">
         <h3>Star Trek vs Star Wars!</h3>
+        <p><?bash hostname ?></p>
         <p><?bash uptime | sed 's/average//g' ?></p>
         <form id="choice" name='form' method="POST" action="/">
           <button id="a" type="submit" name="vote" class="a" value="a">Star Trek</button>

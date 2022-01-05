@@ -11,13 +11,13 @@ pipeline {
           branch 'dev'
           anyOf {
             changeset "Dockerfile"
-            changeset "k3s/base/**"
-            changeset "k3s/dev/**"
+            changeset "k8s/base/**"
+            changeset "k8s/dev/**"
           }
         }
         steps {
             echo 'Build Dev..'
-            sh("cd k3s/dev/ && skaffold run")
+            sh("cd k8s/dev/ && skaffold run")
         }   
       }
       stage('Build Production') {
@@ -25,8 +25,8 @@ pipeline {
           branch 'master'
           anyOf {
             changeset "Dockerfile"
-            changeset "k3s/base/**"
-            changeset "k3s/production/**"
+            changeset "k8s/base/**"
+            changeset "k8s/production/**"
           }
         }
         steps {
