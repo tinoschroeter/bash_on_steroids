@@ -26,6 +26,7 @@
         <h3>Star Trek vs Star Wars!</h3>
         <p>Hostname: <?bash hostname ?></p>
         <p><?bash uptime | sed 's/average//g' | sed 's/  0 users, //g' ?></p>
+        <p>IP Adress: <?bash echo $HTTP_X_REAL_IP ?></p>
         <form id="choice" name='form' method="POST" action="/">
           <button id="a" type="submit" name="vote" class="a" value="a">Star Trek</button>
           <button id="b" type="submit" name="vote" class="b" value="b">Star Wars</button>
