@@ -1,4 +1,5 @@
-## Use !#bash scripts for writing beautiful web apps  :sparkles:
+# Use !#bash scripts for writing beautiful web apps  :sparkles
+
 ![pageres](https://raw.githubusercontent.com/tinoschroeter/bash_on_steroids/master/static/like_a_boss.png)
 
 • [DEMO bos.tino.sh](https://bos.tino.sh)
@@ -13,30 +14,32 @@
 [![GitHub Super-Linter](https://github.com/tinoschroeter/bash_on_steroids/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/tinoschroeter/bash_on_steroids/actions/workflows/linter.yml)
 ![last-commit](https://img.shields.io/github/last-commit/tinoschroeter/bash_on_steroids.svg?style=flat)
 
-* [Features](#Features)
-* [Install Apache2](#Install-Apache2)
-* [install BoS](#install-BoS)
-* [Usage](#Usage)
+* [Features](#features)
+* [Install Apache2](#install-apache2)
+* [install BoS](#install-bos)
+* [Usage](#usage)
 
 ## Features
-- easy to use  ``` <?bash echo "hello world" ?>```
-- write fast **wabapps** in pure **#!bash** script
-- **QUERY_STRING** and **POST_STRING** variables can used as normal bash **variables**
+
+* easy to use  ```<?bash echo "hello world" ?>```
+* write fast **wabapps** in pure **#!bash** script
+* **QUERY_STRING** and **POST_STRING** variables can used as normal bash **variables**
   (e.g example?var1=foo&var2=bar&var3=nase becomes to echo "${var1} ${var2} ${var3})
-- Funktion for decoding URL-encoding: var_dec=$(urldecode $var1)
-- Bash for Web Applications
+* Funktion for decoding URL-encoding: var_dec=$(urldecode $var1)
+* Bash for Web Applications
 
 ## Why?
-- Because there's nothing you can't fix with a #!Bash Script.
+* Because there's nothing you can't fix with a #!Bash Script.
 
 ## Install Apache2
+
 ```shell
 apt-get update; apt-get install -y apache2
 tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
 <VirtualHost *:80>
-	ServerName example.org
-	ServerAdmin webmaster@example.org
-	DocumentRoot /var/www/html/
+ ServerName example.org
+ ServerAdmin webmaster@example.org
+ DocumentRoot /var/www/html/
  
         ScriptAlias "/index.html" "/usr/lib/cgi-bin/index.cgi"
         ScriptAlias "/index" "/usr/lib/cgi-bin/index.cgi"
@@ -46,9 +49,9 @@ tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
           Options -Indexes
           Require all granted
         </Directory>
-	ErrorLog /var/log/apache2/error.log
-	CustomLog /var/log/apache2/access.log combined
-	Include conf-available/serve-cgi-bin.conf
+ ErrorLog /var/log/apache2/error.log
+ CustomLog /var/log/apache2/access.log combined
+ Include conf-available/serve-cgi-bin.conf
 </VirtualHost>
 EOF
 a2enmod cgid
@@ -68,7 +71,9 @@ $ index.cgi can be found in  /usr/lib/cgi-bin
 ```
 
 ## Usage
-All bash codes are to be enclosed within ``` <?bash ... ?> or in short, <? ... ?>``` tags. 
+
+All bash codes are to be enclosed within ```<?bash ... ?> or in short, <? ... ?>``` tags.
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -117,6 +122,7 @@ echo  "</html>"
 ![list](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/lists.png)
 
 ## Decode URL-encoding
+
 ```
 transform this %23%21%2Fbin%2Fbash to that #!/bin/bash
 example:
@@ -127,11 +133,14 @@ https://en.wikipedia.org/wiki/Percent-encoding
 ```
 
 ## build
+
 ```shell
-$ ./build.sh 
-$ index.htsh --->> /usr/lib/cgi-bin/index.cgi
+./build.sh 
+index.htsh --->> /usr/lib/cgi-bin/index.cgi
 ```
+
 ## Vagrant
+
 ```shell
 git clone https://github.com/tinoschroeter/bash_on_steroids.git
 cd bash_on_steroids
@@ -140,17 +149,18 @@ vagrant up
 
 open http://localhost:8090/
 ```
+
 ![STvsSW](https://github.com/tinoschroeter/bash_on_steroids/blob/master/static/stvssw.jpg)
 
 ## DEMO
 
-  * [Vote Star Trek vs Star Wars](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vote)
-  * [QR Code Generator](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/qrcode)
-  * [Environment Variables](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/env)
-  * [guestbook](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/guestbook)
-  * [Markdown Wiki](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wiki)
-  * [login](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/login)
-  * [WLAN config tool](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wlan)
+* [Vote Star Trek vs Star Wars](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/vote)
+* [QR Code Generator](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/qrcode)
+* [Environment Variables](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/env)
+* [guestbook](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/guestbook)
+* [Markdown Wiki](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wiki)
+* [login](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/login)
+* [WLAN config tool](https://github.com/tinoschroeter/bash_on_steroids/tree/master/DEMO/wlan)
 
 ## Wiki
 
@@ -160,3 +170,4 @@ open http://localhost:8090/
 ## License
 
 [MIT](http://choosealicense.com/licenses/mit/)
+
