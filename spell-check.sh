@@ -6,11 +6,10 @@
 # aspell -l en -a          // check individual words
 
 if [ -z "$1" ]; then
-  echo Example: $0 en
-  exit 1
+	echo Example: "$0" en
+	exit 1
 fi
 
 for f in **/*.md; do
-	aspell --home-dir=. check -d $1 $f
+	aspell --home-dir=. check -d "$1 $f"
 done
-
