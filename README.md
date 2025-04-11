@@ -8,9 +8,7 @@
 ![MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/bashops/bash_on_steroids)
 [![GitHub issues](https://img.shields.io/github/issues/tinoschroeter/bash_on_steroids.svg?style=popout)](https://github.com/tinoschroeter/bash_on_steroids/projects/1)
-![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)
 [![k3s](https://img.shields.io/badge/run%20on%20-Raspberry%20Pi-red)](https://github.com/tinoschroeter/k8s.homelab)
-[![GitHub Super-Linter](https://github.com/tinoschroeter/bash_on_steroids/workflows/Lint%20Code%20Base/badge.svg)](https://github.com/tinoschroeter/bash_on_steroids/actions/workflows/linter.yml)
 ![last-commit](https://img.shields.io/github/last-commit/tinoschroeter/bash_on_steroids.svg?style=flat)
 
 - [Features](#features)
@@ -89,7 +87,7 @@ All bash codes are to be enclosed within `<?bash ... ?> or in short, <? ... ?>` 
 
 **The Template Enginge will create this cgi script out of it**
 
-```
+```bash
 #!/bin/bash
 echo "X-Bash-On-Steroids: Because there's nothing you can't fix with a #!Bash Script."
 echo Content-type: text/html
@@ -121,7 +119,7 @@ echo  "</html>"
 
 ## Decode URL-encoding
 
-```
+```bash
 transform this %23%21%2Fbin%2Fbash to that #!/bin/bash
 example:
 
@@ -130,20 +128,31 @@ var_dec=$(urldecode $var)
 https://en.wikipedia.org/wiki/Percent-encoding
 ```
 
+## Escape HTML
+
+```bash
+# The characters `&`, `<`, `>`, `"`, and `'` are replaced
+# by their corresponding HTML entities to prevent XSS attacks.
+
+system_info=$(uname -a)
+  echo "$(html_escape "$system_info")"
+```
+
 ## build
 
-```shell
+```bash
 ./build.sh
 index.htsh --->> /usr/lib/cgi-bin/index.cgi
 ```
 
-## Vagrant
+## Docker
 
-```shell
+```bash
 git clone https://github.com/tinoschroeter/bash_on_steroids.git
 cd bash_on_steroids
 
-vagrant up
+docker build -t bos .
+docker run -p 80:8090 bos
 
 open http://localhost:8090/
 ```

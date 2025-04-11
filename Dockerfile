@@ -1,8 +1,8 @@
-FROM ubuntu:22.04 AS bash_on_steroids
+FROM ubuntu:24.04 AS bash_on_steroids
 
 ENV DEBIAN_FRONTEND=noninteractive TZ=Europe/Berlin
-RUN apt-get update && \ 
-    apt-get install -y wget curl
+RUN apt-get update && \
+  apt-get install -y wget curl
 
 WORKDIR /bash_on_steroids
 COPY install.sh .
