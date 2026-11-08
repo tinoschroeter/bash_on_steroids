@@ -1,13 +1,13 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  annotations: 
+  annotations:
   labels:
     app: bos-app
   name: bos-app
   namespace: bos
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: bos-app
@@ -17,19 +17,19 @@ spec:
         app: bos-app
     spec:
       containers:
-      - name: bos-app
-        image: registry.tino.sh/bos
-        volumeMounts:
-        - name: bos-file
-          mountPath: /tmp
-        resources:
-          requests:
-            memory: "100Mi"
-            cpu: "200m"
-          limits:
-            memory: "440Mi"
-            cpu: "500m"
+        - name: bos-app
+          image: registry.tino.sh/bos
+          volumeMounts:
+            - name: bos-file
+              mountPath: /tmp
+          resources:
+            requests:
+              memory: "100Mi"
+              cpu: "200m"
+            limits:
+              memory: "440Mi"
+              cpu: "500m"
       volumes:
-      - name: bos-file
-        persistentVolumeClaim:
-          claimName: pvc-bos-file
+        - name: bos-file
+          persistentVolumeClaim:
+            claimName: pvc-bos-file

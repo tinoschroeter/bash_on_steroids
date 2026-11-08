@@ -9,7 +9,7 @@ tee /etc/apache2/sites-enabled/000-default.conf >/dev/null <<EOF
     DocumentRoot /var/www/html/
  
         ScriptAlias "/index.html" "/usr/lib/cgi-bin/index.cgi"
-        ScriptAlias "/index" "/usr/lib/cgi-bin/index.cgi"                                                                                             
+        ScriptAlias "/index" "/usr/lib/cgi-bin/index.cgi"
         RedirectMatch 404 .*\.htsh
         <Directory /var/www/html/>
           AllowOverride none
